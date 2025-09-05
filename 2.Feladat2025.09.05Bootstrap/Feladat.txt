@@ -1,0 +1,3 @@
+hasznalni bootstrap , azt oldal kozepen nagy meretben 50 szazalekban kis meretben 100% ban lkegyen ,jelenjen meg valamilyen szinu teglalap
+ebben jelenjen meg egy idezet, 5 mp ken az elozo teglalap ele jojjon egy ujabb. Egyszerre max 3 idezet.
++ animalva csusztatas.
