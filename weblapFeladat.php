@@ -12,33 +12,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Weblap Feladat</title>
-    <style>
-        #container {
-            border: 2px solid black;
-            border-radius: 10px;
-   
-            margin-top: 20px;
-            margin-bottom: 20px;
-           
-            background-color:rgb(197, 197, 197);
-
-        }
-        #kartya{
-            background-color: rgb(119, 152, 177);
-            border: 2px solid black;
-            border-radius: 10px;
-        }
-        #navbar{
-            border: 2px solid black;
-            border-radius: 10px;
-        }
-        
-    </style>
 </head>
 
 <body>
 
-<div class="container-lg" id="container">
+<div class="container-lg">
     <div class="row">
         <div class="col-sm-12 text-center">
             <div class="display-1"><?php
@@ -48,8 +26,8 @@
     </div>
     <div class="row">
         <div class="col-sm-4 p-2">
-            <div class="card w-100" id="kartya" >
-                <div class="card-body" >
+            <div class="card w-100" >
+                <div class="card-body">
                     <h5 class="card-title"><?php
                     echo $adatok["kartya"]["cim"][rand(0,sizeof($adatok["kartya"]["cim"])-1)];
                     ?></h5>
@@ -58,14 +36,12 @@
                     ?></p>
                     <a href="<?php
                     $adatok["kartya"]["link"][rand(0,sizeof($adatok["kartya"]["link"])-1)];
-                    ?>" class="btn btn-primary"><?php
-                    echo $adatok["kartya"]["link"][rand(0,sizeof($adatok["kartya"]["link"])-1)];
-                    ?></a>
+                    ?>" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>
         <div class="col-sm-8 p-2">
-            <nav class="navbar navbar-light bg-secondary" id="navbar">
+            <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">Navbar</span>
                 </div>
@@ -76,7 +52,7 @@
     </div>
     <div class="row">
         <div class="col-sm-4 justify-content-center p-2">
-            <div class="card h-100" id="kartya" >
+            <div class="card h-100">
                 <div class="card-body">
                     <h5 class="card-title"><?php
                     echo $adatok["kartya"]["cim"][rand(0,sizeof($adatok["kartya"]["cim"])-1)];
@@ -86,9 +62,7 @@
                     ?></p>
                     <a href="<?php
                     $adatok["kartya"]["link"][rand(0,sizeof($adatok["kartya"]["link"])-1)];
-                    ?>" class="btn btn-primary"><?php
-                    echo $adatok["kartya"]["link"][rand(0,sizeof($adatok["kartya"]["link"])-1)];
-                    ?></a>
+                    ?>" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>
@@ -98,7 +72,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12 p-2">
-            <footer class="bg-secondary text-white text-center">
+            <footer class="bg-dark text-white text-center">
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a.</p>
             </footer>
         </div>

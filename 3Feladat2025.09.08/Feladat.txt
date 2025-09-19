@@ -1,1 +1,0 @@
-Késziteni egy led-mátrix szimulációt, ahol a ledeket lehet programozni, szín szerint,
