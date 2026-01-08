@@ -1,0 +1,12 @@
+Egy json objektum amiben van 
+Cím
+Szöveg
+1-2 kép
+Tartalmi elem aminek vannak oldalso kartyai (5db)
+
+Legyen egy fő tartalmi rész (Valami cím hogy várj vagy nem tom)
+ha betöltödik az oldal töltsük be a json fájl
+tartalmakból egy navigációs rész
+navigáció szövege (cime) csak az első 10 karakter jelenjen meg és utána.......
+kattintásokr jelenjen meg a megfelelő tartalom
+5 kártyából csak 3 jelenjen meg random

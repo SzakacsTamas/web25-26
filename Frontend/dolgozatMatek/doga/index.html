@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>document</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <span class="navbar-brand">Matek API</span>
+    <div>
+      <button class="btn btn-outline-light btn-sm" onclick="show('fakt')">Fakt</button>
+      <button class="btn btn-outline-light btn-sm" onclick="show('szorzat')">Szorzat</button>
+      <button class="btn btn-outline-light btn-sm" onclick="show('haromszog')">Háromszög</button>
+      <button class="btn btn-outline-light btn-sm" onclick="show('random')">Random</button>
+      <button class="btn btn-outline-light btn-sm" onclick="show('lorem')">Lorem</button>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-primary text-white text-center p-4">
+<h1>Matek feladatok</h1>
+<p>HTML + Fetch + matek.api</p>
+</header>
+
+<div class="container my-4">
+
+<div id="fakt" class="card p-3 d-none">
+<h3>Faktoriális</h3>
+<input id="fN" class="form-control mb-2" type="number">
+<button class="btn btn-primary" onclick="call('/fakt/'+fN.value,'fRes')">Számol</button>
+<div id="fRes" class="mt-2"></div>
+</div>
+
+<div id="szorzat" class="card p-3 d-none">
+<h3>Szorzat</h3>
+<input id="sA" class="form-control mb-2" placeholder="A">
+<input id="sB" class="form-control mb-2" placeholder="B">
+<button class="btn btn-primary" onclick="call('/szorzat/'+sA.value+'/'+sB.value,'sRes')">Számol</button>
+<div id="sRes" class="mt-2"></div>
+</div>
+
+<div id="haromszog" class="card p-3 d-none">
+<h3>Háromszög terület</h3>
+<input id="hA" class="form-control mb-2" placeholder="a">
+<input id="hB" class="form-control mb-2" placeholder="b">
+<input id="hC" class="form-control mb-2" placeholder="c">
+<button class="btn btn-primary" onclick="call('/haromszog/'+hA.value+'/'+hB.value+'/'+hC.value,'hRes')">Számol</button>
+<div id="hRes" class="mt-2"></div>
+</div>
+
+<div id="random" class="card p-3 d-none">
+<h3>Random szám</h3>
+<input id="r1" class="form-control mb-2" placeholder="tól / max">
+<input id="r2" class="form-control mb-2" placeholder="ig (opcionális)">
+<input id="r3" class="form-control mb-2" placeholder="lépés (opcionális)">
+<button class="btn btn-primary" onclick="
+let u='/random/'+r1.value;
+if(r2.value)u+='/'+r2.value;
+if(r3.value)u+='/'+r3.value;
+call(u,'rRes');">Sorsol</button>
+<div id="rRes" class="mt-2"></div>
+</div>
+
+<div id="lorem" class="card p-3 d-none">
+<h3>Lorem Ipsum</h3>
+<input id="lN" class="form-control mb-2" type="number">
+<button class="btn btn-primary" onclick="call('/lorem/'+lN.value,'lRes')">Generál</button>
+<div id="lRes" class="mt-2"></div>
+</div>
+
+</div>
+
+<footer class="bg-dark text-white text-center p-3">
+Matek API
+</footer>
+
+<script>
+function show(id){
+  document.querySelectorAll('.card').forEach(e=>e.classList.add('d-none'));
+  document.getElementById(id).classList.remove('d-none');
+}
+
+async function call(url, out){
+  const r = await fetch('matek.php'+url).then(r=>r.json());
+  document.getElementById(out).innerText = r.result ?? r.error;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dolgozat</title>
+    <style>
+        td{
+            padding:0;
+            font-size: 0;
+        }
+        table{
+            border-spacing: 0;
+            margin:auto;
+        }
+    </style>
+</head>
+<body>
+    <script>
+  fetch("images.json")
+            .then((res) => res.json())
+            .then((adatok) => {
+                console.log(adatok.data[1].src.split("_")[2])
+                let tabla=document.createElement("table")
+                let szam =0;
+                let szamok=[];  
+                 for (let i = 0; i < 26; i++)
+                 {
+                    let sor=document.createElement("tr")
+                    for (let i = 0; i < 8; i++)
+                    {
+                        let tablaAdat=document.createElement("td")
+                        let kep=document.createElement("img")                                              
+                        kep.src=adatok.baseurl+adatok.data[szam].src
+                        kep.width=adatok.data[szam].size.widt   
+                        kep.height=adatok.data[szam].size.heigt
+                        //console.log(adatok.data[szam].src.split("_")[2])        
+                        szamok.push(adatok.data[szam].src.split("_")[2])
+                        szamok.sort();
+                        console.log(szamok);                    
+                        tablaAdat.appendChild(kep)
+                        sor.appendChild(tablaAdat)
+                        tabla.appendChild(sor);
+                        szam++;
+                    } 
+                 }
+                 console.log(tabla)
+                 document.body.append(tabla)
+            });
+
+        
+            
+    </script>
+</body>
+</html>

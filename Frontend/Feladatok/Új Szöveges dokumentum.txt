@@ -1,0 +1,9 @@
+Letölteni 6 képet
+Megjeleníteni
+JavaScript, elem létrehozással
+
+legyen vmi szöveg akkor ha a kép fölött hagyjuk az egeret (title-vel)
+Ha a képre kattintunk akkor a képek alat nagyban jelenljen meg az a kép amire kattintottunk (figure html tag)
+
+Ha kész úgy átalakítani hogy egy json fájlból legyen meg és legyen bővíthető
+Ha kész akkor megcsinálni hogy mindig csak 6 kép látszódjon és lehessen lapozni 

@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\bin\Debug\net8.0\ascii.exe
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\bin\Debug\net8.0\ascii.deps.json
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\bin\Debug\net8.0\ascii.runtimeconfig.json
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\bin\Debug\net8.0\ascii.dll
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\bin\Debug\net8.0\ascii.pdb
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.sourcelink.json
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.dll
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\refint\ascii.dll
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.pdb
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ascii.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\C#\ascii\ascii\obj\Debug\net8.0\ref\ascii.dll

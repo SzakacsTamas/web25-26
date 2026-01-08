@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\web25-26\\C#\\ASCII\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D939A492-BA21-42D8-94F8-216100B3CBC6}|ascii\\ascii.csproj|c:\\xampp\\htdocs\\web25-26\\c#\\ascii\\ascii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D939A492-BA21-42D8-94F8-216100B3CBC6}|ascii\\ascii.csproj|solutionrelative:ascii\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 285,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\C#\\ASCII\\ascii\\Program.cs",
+              "RelativeDocumentMoniker": "ascii\\Program.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\C#\\ASCII\\ascii\\Program.cs",
+              "RelativeToolTip": "ascii\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-08T10:49:01.737Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

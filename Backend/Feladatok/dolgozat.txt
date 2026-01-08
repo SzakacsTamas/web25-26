@@ -1,0 +1,12 @@
+Fájl feltöltés, ha a fájl jpg vagy png--- akkor a kepek mappaba töltse fel , 2 átméretezett peldányba
+kicsi---nagy
+a nagy 800x600-as méretbe férjen bele
+a kicsi 100 széles legyen!!
+
+Ha nem kép a feltöltött dolog--- vizsgálja hogy a kiterjesztés nem lehet: PHP, HTML, JS akkor ne másolja sehova, lehet akár hibaüzenet is
+Ezt a fájlt ha bármi más akk a dokumentáciok mappába tegye bele
+
+A kepek-nél legyen a nevük sorszámozott 
+ne az eredeti nevük legyen hanem sorszámozott, akár jpg akár png- a nevük legyen img1 img2 …… sroban
+
+a kisképek jelenjenek meg alul

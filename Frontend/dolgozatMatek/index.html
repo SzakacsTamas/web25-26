@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+<body>
+    <body>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+   
+    <div class="text-center">
+                         <a class="navbar-brand btn btn-outline-primary p-2" onclick="(function(){
+                         
+                            document.getElementById('fakt').classList.remove('d-none')
+                            })()">Faktoriális</a>
+                    <a class="navbar-brand btn btn-outline-primary p-2" onclick="(function(){
+                         
+                            document.getElementById('szorzat').classList.remove('d-none')
+                            })()">Szorzat</a>
+                    <a class="navbar-brand btn btn-outline-primary p-2">Háromszög</a>
+                    <a class="navbar-brand btn btn-outline-primary p-2">Random</a>
+                    <a class="navbar-brand btn btn-outline-primary p-2">Lorem</a>
+    </div>
+  </div>
+</nav>
+<div class="bg-primary text-white text-center p-4">
+<h1>Matekos API dolgozat</h1>
+<p>HTML + Fetch + Bootstrap + PHP</p>
+</div>
+
+
+
+<div class="d-none" id="fakt">
+    <div class="container bg-light"><label for="">Adj meg egy számot max 20-ig</label><input type="number" id="szam"><button class="btn btn-outline-success" onclick="faktorialis()">GO</button>
+    <br>
+<div id="eredmeny"></div></div>
+</div>
+
+
+<div class="d-none" id="szorzat">
+    <div class="container bg-light">
+        <label for="">Első szám:</label><input type="number" id="szam1"><br>
+        <label for="">Második szám:</label><input type="number" id="szam2"><br>
+        <button class="btn btn-outline-success" onclick="szorzas()">GO</button>
+    <br>
+<div  id="eredmeny2"></div></div>
+</div>
+
+<footer class="bg-dark text-white text-center p-3">
+Készítette: Szakács Tamás
+</footer>
+<script>
+
+function faktorialis() {
+    fetch("asd.php/fakt/"+document.getElementById("szam").value
+    )
+        .then((x) => x.text())
+        .then((valasz) => {
+           document.getElementById("eredmeny").innerHTML="Az eredmény: " +valasz
+        });
+}
+function szorzas() {
+    fetch("asd.php/szorzat/"+document.getElementById("szam1").value+document.getElementById("szam2").value)
+        .then((x) => x.text())
+        .then((valasz) => {
+            document.getElementById("eredmeny2").innerHTML="Az eredmény: " +valasz
+        });
+}
+function haromszog() {
+    fetch("asd.php/haromszog/2/2/2")
+        .then((x) => x.text())
+        .then((valasz) => {
+            console.log(valasz);
+        });
+}
+
+
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</body>
+</html>

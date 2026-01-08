@@ -1,0 +1,29 @@
+{
+    "mesek": [
+        {
+            "cim": "A varázslatos törpök",
+            "szoveg": "A varázslatos törpök egy csodálatos mese, amelyben a törpök kalandjait követhetjük nyomon.",
+            "kep": "kep1.jpg"
+        },
+        {
+            "cim": "A törpök és a hét törpe",
+            "szoveg": "A törpök és a hét törpe egy klasszikus történet, amelyben a törpök és a hét törpe barátságát és kalandjait ismerhetjük meg.",
+            "kep": "kep2.jpg"
+        },
+        {
+            "cim": "szeretem az állatokat",
+            "szoveg": "Szeretem az állatokat egy szívmelengető mese, amelyben az állatok és emberek közötti különleges kapcsolatot mutatja be.",
+            "kep": "kep3.jpg"
+        },
+        {
+            "cim": "A kis hableány",
+            "szoveg": "A kis hableány egy varázslatos történet, amelyben a tenger mélyén élő kis hableány kalandjait követhetjük nyomon.",
+            "kep": "kep4.jpg"
+        },
+        {
+            "cim": "A kis hableány és a tenger",
+            "szoveg": "A kis hableány és a tenger egy izgalmas mese, amelyben a kis hableány és a tenger közötti különleges kapcsolatot ismerhetjük meg.",
+            "kep": "kep5.jpg"
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+Labirintus tervező program
+Állítható méretű alapból 10x10 üres terület/helység
+Lehessen kattintásal falakat elvenni, hozzáadni
+session-be eltárolni hogy hol van fal és hol nincs
+egy gomb ami ezt a session-t megjeleíti a számokat
+0-ahol nincs fal 1 ahol van fal
+legyen egy gomb amivel a kész labirintust el lehet menteni session-ba
+az elmentett labirintusok is jelenjenek meg alul kicsiben- ha akarjuk őket szerkeszteni akkor lehessen vissza rakni a szerkesztőbe

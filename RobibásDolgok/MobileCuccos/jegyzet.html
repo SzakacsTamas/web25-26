@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jegyzet</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <style>
+    #megoldasGomb{
+       width: 1.5em;
+  height: 1.5em;
+    }
+  </style>
+  <body>
+    <div id="kontener" class="container border border-dark">
+      <div class="row bg-light border-bottom border-4 ">
+        <nav class="navbar bg-secondary">
+          <img
+            src="logo.png"
+            class="img-fluid"
+            height="50px"
+            width="50px"
+            alt=""
+          />
+          <h4>Jegyzettömb
+</h4>
+          <div class="dropdown">
+            <button
+              class="btn btn-dark dropdown-toggle"
+              type="button"
+              id="menuButton"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              +
+            </button>
+            <ul class="dropdown-menu p-2" aria-labelledby="menuButton">
+              <li>
+                <button
+                  class="dropdown-item text-secondary border border-secondary"
+                  onclick="create('bg-secondary')"
+                >
+                  Sima jegyzet
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item text-warning border border-warning"
+                  onclick="create('bg-warning')"
+                >
+                  Fontos Jegyzet
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item text-danger border border-danger"
+                  onclick="create('bg-danger')"
+                >
+                  Sürgős Jegyzet
+                </button>
+              </li>
+
+                            <li>
+                <button
+                  class="dropdown-item text-info border border-info"
+                  onclick="create('bg-info')"
+                >
+                  Infó Jegyzet
+                </button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+function iras(simaCim){
+          let bevitel=document.createElement("input")
+          bevitel.setAttribute("type","text")
+          bevitel.setAttribute("id","szoveg")
+          simaCim.innerHTML=""
+          
+          simaCim.appendChild(bevitel)
+          bevitel.focus()
+          
+          simaCim.addEventListener("focusout",function(){
+          
+          if(document.getElementById("szoveg").value==undefined || document.getElementById("szoveg").value=="")
+          {
+
+            simaCim.innerHTML="Valamit irnod kell!"
+           
+          }
+          else{
+simaCim.innerHTML=document.getElementById("szoveg").value
+          }
+          })
+
+ 
+        
+
+}
+
+function feladatMegoldva(sor,hatter,checkbox)
+{
+console.log(checkbox)
+pipa = checkbox.querySelector("input[type='checkbox']");
+
+  if(pipa.checked){
+  sor.classList.remove(hatter)
+  sor.classList.add('bg-success');
+  sor.classList.add('border','border-3','border-'+hatter.split("-")[1])
+  
+
+}
+else{
+    sor.classList.remove('bg-success')
+sor.classList.add(hatter);
+
+}
+
+
+}
+
+
+function create(hatter) {
+        simaDivRow = document.createElement("div");
+        simaDivRow.classList.add("row","p-3");
+        simaDivCol=document.createElement("div");
+        simaDivCol.classList.add("col-12",hatter,"rounded","p-4","d-flex", "flex-column","doboz",'border','border-3','border-'+hatter.split("-")[1])
+        simaCim=document.createElement("h4")
+        simaCim.innerHTML="Példa cím"
+        simaSzoveg=document.createElement("div")
+        simaSzoveg.innerHTML="Ide irhatod a jegyzeteid!"
+        torlesGombKontener=document.createElement("div")
+        torlesGombKontener.classList.add("mt-auto", "d-flex", "justify-content-end");
+        torlesGomb=document.createElement("button")
+        torlesGomb.classList.add("btn", "btn-outline-light", "btn-dark")
+        torlesGomb.innerHTML="🗑️";
+
+        megoldasGombKontener=document.createElement("div")
+        megoldasGombKontener.classList.add("mt-auto", "d-flex","p-3", "justify-content-end","megoldasGombKontener");
+        megoldasGomb=document.createElement("input")
+        megoldasGomb.setAttribute("type","checkbox")
+        megoldasGomb.setAttribute("id","megoldasGomb")
+        megoldasGomb.classList.add("form-check-input","btn-dark", "btn-outline-light","h-300","w-300")
+
+  
+       
+                
+
+                torlesGomb.addEventListener("click",function(e){
+            const rowToRemove = e.currentTarget.closest(".row");
+
+               if (rowToRemove) rowToRemove.remove();
+        })
+
+
+        megoldasGomb.addEventListener("change", function(e){
+          const rowToGreen = e.currentTarget.closest(".row");
+          if (rowToGreen)
+          feladatMegoldva(e.currentTarget.closest(".doboz"),hatter,e.currentTarget.closest(".megoldasGombKontener"));
+        })
+
+
+ 
+
+//GOND--- Ugyanat mint a törlésgombnál, mindig a legalsóba akar irni, nem pedig abba amibe kéne
+
+  simaCim.addEventListener("dblclick",function(e){
+                  iras(e.currentTarget);
+                })
+                                simaSzoveg.addEventListener("dblclick",function(e){
+                  iras(e.currentTarget);
+                })
+
+    simaCim.addEventListener("touchend",function(e){
+      iras(e.currentTarget);
+    })
+ 
+        simaSzoveg.addEventListener("touchend",function(e){
+      iras(e.currentTarget);
+    })
+        
+
+
+    megoldasGombKontener.appendChild(megoldasGomb)
+
+        torlesGombKontener.appendChild(torlesGomb)
+        simaDivCol.appendChild(simaCim)
+        simaDivCol.appendChild(simaSzoveg)
+        simaDivCol.appendChild(megoldasGombKontener)
+        simaDivCol.appendChild(torlesGombKontener)
+        simaDivRow.appendChild(simaDivCol)
+        document.getElementById("kontener").appendChild(simaDivRow);
+      }
+
+
+
+
+
+      var popoverTriggerList = [].slice.call(
+        document.querySelectorAll('[data-bs-toggle="popover"]')
+      );
+      var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+        return new bootstrap.Popover(popoverTriggerEl);
+      });
+
+      
+    </script>
+  </body>
+</html>

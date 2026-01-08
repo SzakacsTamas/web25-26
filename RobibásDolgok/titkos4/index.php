@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(isset($_GET["action"]) && $_GET["action"] == "logout")
+    {
+        session_destroy();
+        header("Location: ".$_SERVER['PHP_SELF']);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +16,26 @@
 </head>
 <body>
     <h1>Privát oldal</h1>
+<?php
+    if (isset($_POST["usernev"]) && $_POST["usernev"]=="tomi" && isset($_POST["jelszo"]) && $_POST["jelszo"]=="1234") {
+        $_SESSION["user"] = $_POST["usernev"];
+        $_SESSION["jelszo"] = $_POST["jelszo"];
+     }
+    if (isset($_SESSION["user"]) && $_SESSION["user"]=="tomi" && isset($_SESSION["jelszo"]) && $_SESSION["jelszo"]=="1234") {
+        echo "<a href='".$_SERVER['PHP_SELF']."'>Link</a>";
+        echo "<a href='".$_SERVER['PHP_SELF']."?action=logout'class=\"btn btn-primary\" >Link</a>";
+        
+    }
+    else
+    {
+        ?>
     <div class="container">
         <div class="row">
             <div class="col-6">
                 <h2>Belépés</h2>
             </div>
         </div>
-        <form action="<?php echo $_SERVER["PHP_SELF"];?>" method="post"></form>
+        <form method="post">
         <div class="row">
             <div class="col-2">
                 <label for="usernev" class="form-label">Felhasználónév: </label>
@@ -38,5 +59,8 @@
         </div>
         </form>
     </div>
+    <?php
+        }
+        ?>
 </body>
 </html>

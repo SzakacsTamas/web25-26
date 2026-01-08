@@ -1,0 +1,15 @@
+
+<script>
+
+function logout(){
+    localStorage.token ="";
+     location="index.html";
+}
+
+fetch('http://localhost/web25-26/rest_api_full/rest_api_jwt_full/backend/api/profile.php',{
+ headers:{Authorization:'Bearer '+localStorage.token}
+})
+.then(r=>r.json())
+.then(d=>document.body.innerHTML=`<h1>Welcome ${d.user} </h1>
+<button onclick="logout()">LOGOUT</button>`);
+</script>

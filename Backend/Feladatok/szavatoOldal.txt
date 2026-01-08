@@ -1,0 +1,5 @@
+Szavazó oldal (Űrlap)
+5 lehetőség közül lehet választani (Radiobutton)
+session-ben el kell tárolni mire szavazott
+szavazás beküldése után 10 másodpercig ne fogadjon el új szavazatot
+a végén megad egy get paramétert meg egy hozzá tartozó jelszót, és ha ez szerepel akkor JELENTSE MEG AZ EREDNÉNYT (vizuálisan is)

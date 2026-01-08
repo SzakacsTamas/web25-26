@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <style>
+            img{
+                width: 150px;
+                height: 150px;
+            }
+        </style>
+
+    <script>
+        fetch('https://fakestoreapi.com/products')
+            .then(res=>{
+               return res.json()
+            })
+            .then(title=>{
+                for(let i=0;i<20;i++)
+                {
+                    let x=document.createElement("div");
+                    x.innerHTML=title[i].title;
+
+                    let kep=document.createElement("img");
+                    kep.setAttribute("src",title[i].image)
+                    kep.addEventListener("click",function(){
+                        let adat=document.createElement("div");
+                        adat.innerHTML=title[i].price,title[i].category,title[i].rating;
+                        console.log(adat);
+                        document.body.appendChild(adat);
+                    })
+
+
+                    let des=document.createElement("div");
+                    des.innerHTML=title[i].description;
+                    document.body.appendChild(des);
+                    document.body.appendChild(kep);
+                    document.body.appendChild(x)
+                }
+            })
+            
+                        
+    </script>
+</body>
+</html>
