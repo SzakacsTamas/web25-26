@@ -1,0 +1,1 @@
+SELECT uzenet.tartalom FROM uzenet WHERE uzenet.tartalom LIKE "%bicikli%" OR uzenet.tartalom LIKE "%bike%";

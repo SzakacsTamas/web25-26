@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg1175"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1172" />
+  <g
+     id="layer1">
+    <circle
+       style="fill:none;stroke:#d40000;stroke-width:1.8;stroke-miterlimit:10;stroke-dasharray:none"
+       id="path1348"
+       cx="25"
+       cy="25"
+       r="17" />
+    <path
+       style="fill:none;stroke:#d40000;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none"
+       id="path1348-8"
+       d="M 39.849242,10.150757 A 21,21 0 0 1 46,25 21,21 0 0 1 39.849242,39.849242" />
+    <path
+       style="fill:none;stroke:#d40000;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none"
+       id="path1348-8-6"
+       d="M -9.926805,10.150757 A 21,21 0 0 1 -3.7760468,25 21,21 0 0 1 -9.9268043,39.849242"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:25.4px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:3;stroke-miterlimit:10;stroke-dasharray:none"
+       x="16.101318"
+       y="34.090919"
+       id="text1813"><tspan
+         id="tspan1811"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#d40000;fill-opacity:1;stroke-width:3"
+         x="16.101318"
+         y="34.090919">P</tspan></text>
+  </g>
+</svg>

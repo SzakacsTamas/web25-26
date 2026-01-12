@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="50mm"
+   height="50mm"
+   viewBox="0 0 50 50"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#d40000;stroke-width:3;stroke-linejoin:miter;stroke-miterlimit:10"
+       id="rect234"
+       width="47"
+       height="28"
+       x="1.5"
+       y="11" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:2.28805;stroke-linejoin:miter;stroke-miterlimit:10"
+       id="rect950"
+       width="7.7119532"
+       height="2.1119373"
+       x="8.493288"
+       y="6.2440405" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:2.28804;stroke-linejoin:miter;stroke-miterlimit:10"
+       id="rect950-5"
+       width="7.7119498"
+       height="2.1119442"
+       x="34.694813"
+       y="6.2440357" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:1.67816;stroke-linejoin:miter;stroke-miterlimit:10"
+       id="rect950-3"
+       width="8.148963"
+       height="1.0751719"
+       x="8.2747831"
+       y="21.15037" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:1.67816;stroke-linejoin:miter;stroke-miterlimit:10"
+       id="rect950-3-8"
+       width="8.148963"
+       height="1.0751719"
+       x="34.476307"
+       y="21.763552" />
+    <rect
+       style="fill:#d40000;fill-opacity:1;stroke:#d40000;stroke-width:1.67816;stroke-linejoin:miter;stroke-miterlimit:10"
+       id="rect950-3-7"
+       width="8.148963"
+       height="1.0751719"
+       x="18.226656"
+       y="-39.088375"
+       transform="rotate(90)" />
+  </g>
+</svg>
