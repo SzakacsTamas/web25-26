@@ -8,19 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\szakt\\.nuget\\packages\\": {}
+    "C:\\Users\\admin\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\szakt\\Desktop\\dsad\\web25-26\\C#\\ASCII\\ascii\\ascii.csproj",
+      "projectUniqueName": "C:\\xampp\\htdocs\\web25-26\\C#\\ascii\\ascii\\ascii.csproj",
       "projectName": "ascii",
-      "projectPath": "C:\\Users\\szakt\\Desktop\\dsad\\web25-26\\C#\\ASCII\\ascii\\ascii.csproj",
-      "packagesPath": "C:\\Users\\szakt\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\szakt\\Desktop\\dsad\\web25-26\\C#\\ASCII\\ascii\\obj\\",
+      "projectPath": "C:\\xampp\\htdocs\\web25-26\\C#\\ascii\\ascii\\ascii.csproj",
+      "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+      "outputPath": "C:\\xampp\\htdocs\\web25-26\\C#\\ascii\\ascii\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\szakt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -45,7 +50,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -66,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
