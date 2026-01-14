@@ -31,7 +31,7 @@ foreach (var sor in konyv)
     Console.WriteLine();
 }
 
-//3 Feladat
+//3-4 Feladat
 
 string[] tomoritett = File.ReadAllLines("szg_t.txt");
 List<string> kibontott = new List<string>();
@@ -43,7 +43,7 @@ foreach (string sor in tomoritett)
 
     while (i < sor.Length)
     {
-        // szám beolvasása
+     
         if (char.IsDigit(sor[i]))
         {
             int szam2 = 0;
@@ -54,7 +54,6 @@ foreach (string sor in tomoritett)
                 i++;
             }
 
-            // a szám utáni karakter
             if (i < sor.Length)
             {
                 char jel = sor[i];
@@ -66,20 +65,12 @@ foreach (string sor in tomoritett)
                 i++;
             }
         }
-        else
-        {
-            // ha nincs szám, akkor 1× írjuk ki
-            ujSor += sor[i];
-            i++;
-        }
+
     }
 
     kibontott.Add(ujSor);
 }
-
-
-//4 Feladat
-Console.WriteLine("\n4. feladat");
+Console.WriteLine("4. feladat");
 
 foreach (string sor in kibontott)
 {
@@ -87,7 +78,7 @@ foreach (string sor in kibontott)
 }
 
 //5 Feladat
-Console.WriteLine("\n5. feladat");
+Console.WriteLine("5. feladat");
 
 Console.Write("Kérem adja meg a tömörített ábra fájlnevét: ");
 string tomoritettNev = Console.ReadLine();
@@ -119,12 +110,8 @@ Console.WriteLine($"A tömörítési arány: {arany:0.00}");
 
 //6 Feladat
 
-Console.WriteLine("\n6. feladat");
-
-// magasság
+Console.WriteLine("6. feladat");
 int magassag = tomoritetlenSorok.Length;
-
-// szélesség
 int szelesseg = 0;
 foreach (string sor in tomoritetlenSorok)
 {
@@ -134,7 +121,6 @@ foreach (string sor in tomoritetlenSorok)
     }
 }
 
-// blokkok száma (nem szóköz)
 int blokkok = 0;
 foreach (string sor in tomoritetlenSorok)
 {
@@ -146,7 +132,6 @@ foreach (string sor in tomoritetlenSorok)
         }
     }
 }
-
 Console.WriteLine($"Az ábra magassága sorokban: {magassag}");
 Console.WriteLine($"Az ábra szélessége karakterekben: {szelesseg}");
 Console.WriteLine($"A blokkok száma: {blokkok}");
