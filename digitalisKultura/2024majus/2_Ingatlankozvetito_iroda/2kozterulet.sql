@@ -1,0 +1,1 @@
+SELECT DISTINCT ingatlan.kozterulet FROM ingatlan ORDER BY ingatlan.kozterulet ASC;
