@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Tanterem – Regisztráció</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    /* Háttér */
+    .background {
+      position: fixed;
+      inset: 0;
+      background: url("background.jpg") center/cover no-repeat;
+      filter: blur(8px);
+      transform: scale(1.1);
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      z-index: -1;
+    }
+
+    /* Két oldal */
+    .role-container {
+      height: 100vh;
+      display: flex;
+    }
+
+    .role {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .role:hover {
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .role-content {
+      text-align: center;
+      color: #fff;
+      padding: 40px;
+      border-radius: 12px;
+    }
+
+    .role h1 {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .role p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .role button {
+      margin-top: 25px;
+      padding: 12px 35px;
+      font-size: 1.1rem;
+    }
+
+    /* Finom elválasztó */
+    .divider {
+      width: 2px;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    @media (max-width: 768px) {
+      .role-container {
+        flex-direction: column;
+      }
+
+      .divider {
+        width: 100%;
+        height: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background"></div>
+  <div class="overlay"></div>
+
+  <div class="role-container">
+
+    <!-- TANÁR -->
+    <div class="role" onclick="selectRole('teacher')">
+      <div class="role-content">
+        <h1>Tanár</h1>
+        <p>Kurzusok létrehozása, feladatok kiadása, értékelés</p>
+        <button class="btn btn-outline-light">Tanárként folytatom</button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- DIÁK -->
+    <div class="role" onclick="selectRole('student')">
+      <div class="role-content">
+        <h1>Diák</h1>
+        <p>Kurzusokhoz csatlakozás, feladatok beadása</p>
+        <button class="btn btn-outline-light">Diákként folytatom</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function selectRole(role) {
+      console.log("Kiválasztott szerep:", role);
+
+      // ide jön majd:
+      // window.location.href = role + "-register.html";
+    }
+  </script>
+
+</body>
+</html>
