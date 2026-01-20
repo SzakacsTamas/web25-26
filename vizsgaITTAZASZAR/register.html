@@ -255,19 +255,24 @@ top: 50%;
       const registerDoboz = document.getAnimations("registerDoboz");
       const body = document.body;
       const background = document.querySelector(".background");
-      diakElem.addEventListener("click", () => {
-        body.classList.add("diak-active");
-    
-        diak.classList.remove("kijeloles");
-        setTimeout(() => {
-          diak.classList.add("text-fly-up");
-          background.classList.add("sharp");
-        }, 1000);
-        setTimeout(() => {
-          registerForm.classList.add("show");
-          backBtn.classList.add("show"); // mutatja a vissza gombot
-        }, 1800);
-      });
+diakElem.addEventListener("click", () => {
+  body.classList.add("diak-active");
+
+  setTimeout(() => {
+    diakElem.classList.add("text-fly-up");
+    background.classList.add("sharp");
+  }, 1000);
+
+  // ⬇⬇ CSAK AZ ANIMÁCIÓ UTÁN
+  setTimeout(() => {
+    tanarElem.classList.add("d-none");
+  }, 1200); // kb slide-duration vége
+
+  setTimeout(() => {
+    registerForm.classList.add("show");
+    backBtn.classList.add("show");
+  }, 1800);
+});
 
       tanarElem.addEventListener("click", () => {
         body.classList.add("tanar-active");
