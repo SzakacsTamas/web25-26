@@ -1,297 +1,297 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="hu">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Regisztráció</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regisztráció</title>
 
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <style>
-    body {
-      color: white;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-      overflow: hidden;
-    }
+    <style>
+      body {
+        color: white;
+        font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        overflow: hidden;
+      }
 
-    .background {
-      position: fixed;
-      inset: 0;
-      background: url(kepek/registerHatter.jpg) center / cover no-repeat;
-      filter: blur(8px);
-      transition: filter 0.6s ease;
-      z-index: -2;
-    }
+      .background {
+        position: fixed;
+        inset: 0;
+        background: url(kepek/registerHatter.jpg) center / cover no-repeat;
+        filter: blur(8px);
+        transition: filter 0.6s ease;
+        z-index: -2;
+      }
 
-    .background.sharp {
-      filter: blur(0);
-    }
+      .background.sharp {
+        filter: blur(0);
+      }
 
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: -1;
-    }
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: -1;
+      }
 
-    .kontener {
-      height: 100vh;
-      font-size: 6rem;
-      overflow: hidden;
-    }
+      .kontener {
+        height: 100vh;
+        font-size: 6rem;
+        overflow: hidden;
+      }
 
-    .opciok {
-      transition: all 1.2s ease;
-    }
+      .opciok {
+        transition: all 1.2s ease;
+      }
 
-    .kijeloles:hover {
-      background-color: rgba(144, 144, 144, 0.25);
-      text-shadow: 2px 2px 30px #000;
-      cursor: pointer;
-    }
+      .kijeloles:hover {
+        background-color: rgba(144, 144, 144, 0.25);
+        text-shadow: 2px 2px 30px #000;
+        cursor: pointer;
+      }
 
-    .opciok span {
-      display: inline-block;
-      transition: transform 0.8s ease, font-size 0.8s ease;
-    }
+      .opciok span {
+        display: inline-block;
+        transition:
+          transform 0.8s ease,
+          font-size 0.8s ease;
+      }
 
-    /* SLIDE LOGIKA */
-    .diak-active #diak {
-      transform: translateX(-50%);
-      width: 100vw;
-    }
+      /* SLIDE LOGIKA */
+      .diak-active #diak {
+        transform: translateX(-50%);
+        width: 100vw;
+      }
 
-    .diak-active #tanar {
-      transform: translateX(-100%);
-    }
+      .diak-active #tanar {
+        transform: translateX(-100%);
+      }
 
-    .tanar-active #tanar {
-      transform: translateX(50%);
-      width: 100vw;
-    }
+      .tanar-active #tanar {
+        transform: translateX(50%);
+        width: 100vw;
+      }
 
-    .tanar-active #diak {
-      transform: translateX(100%);
-    }
+      .tanar-active #diak {
+        transform: translateX(100%);
+      }
 
-    /* SZÖVEG FELÚSZÁS */
-    .text-fly-up span {
-      transform: translateY(-150%);
-      font-size: 7rem;
-    }
+      /* SZÖVEG FELÚSZÁS */
+      .text-fly-up span {
+        transform: translateY(-200%);
+        font-size: 7rem;
+      }
 
-    /* REG FORM – FIX KÖZÉP */
-    .register-form {
-      position: fixed;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(0.95);
-      width: 320px;
-      z-index: 20;
+      /* REG FORM – FIX KÖZÉP */
+      .register-form {
+        position: fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.95);
+        width: 320px;
+        z-index: 20;
 
-      opacity: 0;
-      pointer-events: none;
+        opacity: 0;
+        pointer-events: none;
 
-      transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+      }
 
-    .register-form.show {
-      opacity: 1;
-      pointer-events: auto;
-      transform: translate(-50%, -50%) scale(1);
-    }
-    .backBtn{
-        transition: opacity 0.5s ease, transform 0.5s ease;
-        z-index:25; opacity: 0;
-    }
-    .backBtn.show{
+      .register-form.show {
         opacity: 1;
-    }
-  </style>
-</head>
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .backBtn {
+        transition:
+          opacity 0.5s ease,
+          transform 0.5s ease;
+        z-index: 25;
+        opacity: 0;
+      }
+      .backBtn.show {
+        opacity: 1;
+      }
 
-<body>
+    </style>
+  </head>
+
+  <body>
+    
     <!-- Vissza gomb -->
-<button
-  id="backBtn"
-  class="btn backBtn btn-outline-light position-absolute top-0 start-0 m-3"
-  
->
-  ← Vissza
-</button>
-  <div class="background"></div>
-  <div class="overlay"></div>
-
-  <!-- ROLE VÁLASZTÁS -->
-  <div class="container-fluid">
-    <div class="row kontener">
-      <div
-        id="tanar"
-        class="col d-flex justify-content-center align-items-center opciok kijeloles"
-      >
-        <span>Tanár</span>
-      </div>
-
-      <div
-        id="diak"
-        class="col d-flex justify-content-center align-items-center opciok kijeloles"
-      >
-        <span>Diák</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- REGISZTRÁCIÓS FORM -->
-  <form
-
-    id="registerForm"
-    class="register-form"
-  >
-
-<!-- Profilkép választó -->
-<div class="d-flex flex-column align-items-center mb-4">
-  <!-- Központi kör profilkép -->
-  <img 
-    id="profilePic" 
-    src="kepek/default.jpg" 
-    alt="Profilkép" 
-    class="rounded-circle border border-light mb-2"
-    style="width:80px; height:80px;"
-  />
-
-  <!-- Nyilak a léptetéshez -->
-  <div class="d-flex justify-content-center">
-    <button type="button" class="btn btn-outline-light me-2" id="prevAvatar"><</button>
-    <button type="button" class="btn btn-outline-light" id="nextAvatar">></button>
-  </div>
-</div>
-
-    <div class="mb-3">
-      <input
-        type="text"
-        class="form-control"
-        placeholder="Felhasználó név"
-      />
-    </div>
-
-    <div class="mb-3">
-      <input
-        type="password"
-        class="form-control"
-        placeholder="Jelszó"
-      />
-    </div>
-        <div class="mb-3">
-      <input
-        type="email"
-        class="form-control"
-        placeholder="Email"
-      />
-    </div>
-
-    <button class="btn btn-outline-light w-100">
-      Regisztráció
+    <button
+      id="backBtn"
+      class="btn backBtn btn-outline-light position-absolute top-0 start-0 m-3"
+    >
+      ← Vissza
     </button>
-  </form>
+    <div class="background"></div>
+    <div class="overlay"></div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- ROLE VÁLASZTÁS -->
+    <div class="container-fluid">
+      <div id="egyseges">
+      <div class="row kontener">
+        <div
+          id="tanar"
+          class="col d-flex justify-content-center h-100 align-items-center opciok kijeloles"
+        >
+          <span>Tanár</span>
+        </div>
 
-  <script>
-    const backBtn = document.getElementById('backBtn');
-    const body = document.body;
-    const background = document.querySelector(".background");
-    const registerForm = document.getElementById("registerForm");
+        <div
+          id="diak"
+          class="col d-flex justify-content-center  align-items-center opciok kijeloles"
+        >
+          <span>Diák</span>
+        </div>
 
-    diak.addEventListener("click", () => {
-  body.classList.add("diak-active");
-  diak.classList.remove("kijeloles");
+      </div>
+       <form id="registerForm" class="register-form">
+      <!-- Profilkép választó -->
+      <div class="d-flex flex-column align-items-center mb-4">
+        <!-- Központi kör profilkép -->
+        <img
+          id="profilePic"
+          src="kepek/default.jpg"
+          alt="Profilkép"
+          class="rounded-circle border border-light mb-2"
+          style="width: 80px; height: 80px"
+        />
 
-  setTimeout(() => {
-    diak.classList.add("text-fly-up");
-    background.classList.add("sharp");
+        <!-- Nyilak a léptetéshez -->
+        <div class="d-flex justify-content-center">
+          <button
+            type="button"
+            class="btn btn-outline-light me-2"
+            id="prevAvatar"
+          >
+            <
+          </button>
+          <button type="button" class="btn btn-outline-light" id="nextAvatar">
+            >
+          </button>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Felhasználó név" />
+      </div>
+
+      <div class="mb-3">
+        <input type="password" class="form-control" placeholder="Jelszó" />
+      </div>
+      <div class="mb-3">
+        <input type="email" class="form-control" placeholder="Email" />
+      </div>
+
+      <button class="btn btn-outline-light w-100">Regisztráció</button>
+    </form>
+    </div>
+
+    </div>
+
+    <!-- REGISZTRÁCIÓS FORM -->
    
 
-  }, 1000);
-  setTimeout(() =>{
-    registerForm.classList.add("show");
-        backBtn.classList.add("show");// mutatja a vissza gombot
-  },1800)
-});
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 
-tanar.addEventListener("click", () => {
-  body.classList.add("tanar-active");
-  tanar.classList.remove("kijeloles");
+    <script>
+      const backBtn = document.getElementById("backBtn");
+      const body = document.body;
+      const background = document.querySelector(".background");
+      const registerForm = document.getElementById("registerForm");
 
-  setTimeout(() => {
-    tanar.classList.add("text-fly-up");
-    background.classList.add("sharp");
+      diak.addEventListener("click", () => {
+        body.classList.add("diak-active");
+        diak.classList.remove("kijeloles");
 
-   
-  }, 1000);
-    setTimeout(() =>{
-    registerForm.classList.add("show");
-     backBtn.classList.add("show"); // mutatja a vissza gombot
-  },1800)
-});
+        setTimeout(() => {
+          diak.classList.add("text-fly-up");
+          background.classList.add("sharp");
+        }, 1000);
+        setTimeout(() => {
+          registerForm.classList.add("show");
+          backBtn.classList.add("show"); // mutatja a vissza gombot
+        }, 1800);
+      });
 
-//VISSZA GOMB
-backBtn.addEventListener('click', resetView);
+      tanar.addEventListener("click", () => {
+        body.classList.add("tanar-active");
+        tanar.classList.remove("kijeloles");
+        
 
-function resetView() {
-  // az űrlap azonnal eltűnik
-  registerForm.classList.remove("show");
+        setTimeout(() => {
+          tanar.classList.add("text-fly-up");
+          background.classList.add("sharp");
+        }, 1000);
+        setTimeout(() => {
+          registerForm.classList.add("show");
+          backBtn.classList.add("show"); // mutatja a vissza gombot
+        }, 1800);
+      });
 
-  // visszaállítja az oldal állapotát
-  body.classList.remove("diak-active", "tanar-active");
-  diak.classList.remove("text-fly-up");
-  tanar.classList.remove("text-fly-up");
+      //VISSZA GOMB
+      backBtn.addEventListener("click", resetView);
 
-  // role gombok vissza
-  diak.classList.add("kijeloles");
-  tanar.classList.add("kijeloles");
+      function resetView() {
+        // az űrlap azonnal eltűnik
+        registerForm.classList.remove("show");
 
-  // háttér visszafokozása
-  background.classList.remove("sharp");
+        // visszaállítja az oldal állapotát
+        body.classList.remove("diak-active", "tanar-active");
+        diak.classList.remove("text-fly-up");
+        tanar.classList.remove("text-fly-up");
 
-  // vissza gomb eltüntetése
-  backBtn.classList.remove("show");
+        // role gombok vissza
+        diak.classList.add("kijeloles");
+        tanar.classList.add("kijeloles");
 
-  // avatar alaphelyzetbe
-  currentAvatar = 0;
-  showAvatar(currentAvatar);
-}
+        // háttér visszafokozása
+        background.classList.remove("sharp");
 
-const avatarList = [
-    'kepek/default.jpg',
-    'kepek/avatar1.jpg',
-    'kepek/avatar2.jpg',
+        // vissza gomb eltüntetése
+        backBtn.classList.remove("show");
 
-  ];
+        // avatar alaphelyzetbe
+        currentAvatar = 0;
+        showAvatar(currentAvatar);
+      }
 
-  let currentAvatar = 0;
-  const profilePic = document.getElementById('profilePic');
-  const prevBtn = document.getElementById('prevAvatar');
-  const nextBtn = document.getElementById('nextAvatar');
+      const avatarList = [
+        "kepek/default.jpg",
+        "kepek/avatar1.jpg",
+        "kepek/avatar2.jpg",
+      ];
 
-  function showAvatar(index) {
-    profilePic.src = avatarList[index];
-  }
+      let currentAvatar = 0;
+      const profilePic = document.getElementById("profilePic");
+      const prevBtn = document.getElementById("prevAvatar");
+      const nextBtn = document.getElementById("nextAvatar");
 
-  prevBtn.addEventListener('click', () => {
-    currentAvatar = (currentAvatar - 1 + avatarList.length) % avatarList.length;
-    showAvatar(currentAvatar);
-  });
+      function showAvatar(index) {
+        profilePic.src = avatarList[index];
+      }
 
-  nextBtn.addEventListener('click', () => {
-    currentAvatar = (currentAvatar + 1) % avatarList.length;
-    showAvatar(currentAvatar);
-  });
+      prevBtn.addEventListener("click", () => {
+        currentAvatar =
+          (currentAvatar - 1 + avatarList.length) % avatarList.length;
+        showAvatar(currentAvatar);
+      });
 
-  // Inicializálás
-  showAvatar(currentAvatar);
-  </script>
-</body>
+      nextBtn.addEventListener("click", () => {
+        currentAvatar = (currentAvatar + 1) % avatarList.length;
+        showAvatar(currentAvatar);
+      });
+
+      // Inicializálás
+      showAvatar(currentAvatar);
+    </script>
+  </body>
 </html>

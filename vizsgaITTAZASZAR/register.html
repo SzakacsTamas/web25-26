@@ -8,127 +8,131 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
+    body{
+       font-family:
+          "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+          color: white;
+    }
+    .row{
       height: 100vh;
-      overflow: hidden;
-      font-family: "Segoe UI", sans-serif;
+           overflow: hidden;
+           user-select: none;
+    }
+    .reszponzivSzoveg{
+      font-size: 5rem;
+@media(min-width: 992px){
+  font-size: 8rem;
     }
 
-    /* Háttér */
+  }
+@media(min-width: 992px){
+  
+    .diak-active #diak {
+      
+        transform: translateX(-50%);
+   
+      
+      }
+
+      .diak-active #tanar {
+        transform: translateX(-100%);
+      }
+
+      .tanar-active #tanar {
+        transform: translateX(50%);
+   
+      }
+
+      .tanar-active #diak {
+        transform: translateX(100%);
+      }
+
+    }
+    @media(max-width: 992px){
+ 
+    .diak-active #diak {
+        transform: translateY(-120%);
+        width: 100vw;
+      
+      }
+
+      .diak-active #tanar {
+        transform: translateY(-100%);
+      }
+
+      .tanar-active #tanar {
+        transform: translateY(-20%);
+        width: 100vw;
+      }
+
+      .tanar-active #diak {
+        transform: translateY(100%);
+      }
+
+    }
+
+
+
+
+   
     .background {
-      position: fixed;
-      inset: 0;
-      background: url("background.jpg") center/cover no-repeat;
-      filter: blur(8px);
-      transform: scale(1.1);
-      z-index: -2;
-    }
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: -1;
-    }
-
-    /* Két oldal */
-    .role-container {
-      height: 100vh;
-      display: flex;
-    }
-
-    .role {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .role:hover {
-      background: rgba(255, 255, 255, 0.05);
-    }
-
-    .role-content {
-      text-align: center;
-      color: #fff;
-      padding: 40px;
-      border-radius: 12px;
-    }
-
-    .role h1 {
-      font-size: 3rem;
-      margin-bottom: 15px;
-    }
-
-    .role p {
-      font-size: 1.2rem;
-      opacity: 0.85;
-    }
-
-    .role button {
-      margin-top: 25px;
-      padding: 12px 35px;
-      font-size: 1.1rem;
-    }
-
-    /* Finom elválasztó */
-    .divider {
-      width: 2px;
-      background: rgba(255, 255, 255, 0.15);
-    }
-
-    @media (max-width: 768px) {
-      .role-container {
-        flex-direction: column;
+        position: fixed;
+        inset: 0;
+        background: url(kepek/registerHatter.jpg) center / cover no-repeat;
+        filter: blur(8px);
+        transition: filter 0.6s ease;
+        z-index: -2;
       }
 
-      .divider {
-        width: 100%;
-        height: 2px;
+      .background.sharp {
+        filter: blur(0);
       }
-    }
+
+
+
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        z-index: -1;
+      }
+            .kijeloles:hover {
+        background-color: rgba(144, 144, 144, 0.25);
+        text-shadow: 2px 2px 30px #000;
+        cursor: pointer;
+      }
+      .opciok {
+        transition: all 1.2s ease;
+      }
   </style>
 </head>
 <body>
+   <div class="background"></div>
+    <div class="overlay"></div>
+  <div class="container-fluid">
+<div class="row">
+  <div class="opciok tanar col-12 col-lg-6 d-flex kijeloles reszponzivSzoveg justify-content-center align-items-center" id="tanar"><span>Tanár</span></div>
+  <div class="opciok diak col-12 col-lg-6 d-flex kijeloles reszponzivSzoveg justify-content-center align-items-center" id="diak"><span>Diák</span></div>
+</div>
+</div>
+ 
+ 
+<script>
+const diakElem=document.getElementById("diak");
+const tanarElem=document.getElementById("tanar")
+const body=document.body
+   diakElem.addEventListener("click", () => {
+        body.classList.add("diak-active")
+      diak.classList.remove("kijeloles")
+    })
+     
 
-  <div class="background"></div>
-  <div class="overlay"></div>
-
-  <div class="role-container">
-
-    <!-- TANÁR -->
-    <div class="role" onclick="selectRole('teacher')">
-      <div class="role-content">
-        <h1>Tanár</h1>
-        <p>Kurzusok létrehozása, feladatok kiadása, értékelés</p>
-        <button class="btn btn-outline-light">Tanárként folytatom</button>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- DIÁK -->
-    <div class="role" onclick="selectRole('student')">
-      <div class="role-content">
-        <h1>Diák</h1>
-        <p>Kurzusokhoz csatlakozás, feladatok beadása</p>
-        <button class="btn btn-outline-light">Diákként folytatom</button>
-      </div>
-    </div>
-
-  </div>
-
-  <script>
-    function selectRole(role) {
-      console.log("Kiválasztott szerep:", role);
-
-      // ide jön majd:
-      // window.location.href = role + "-register.html";
-    }
-  </script>
-
+    tanarElem.addEventListener("click", () => 
+    {
+      body.classList.add("tanar-active")
+      tanar.classList.remove("kijeloles");
+    })
+</script>
 </body>
+
 </html>

@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\web25-26\\C#\\panel\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{549FFCE4-3D32-4BE2-976B-16F012158BE7}|panel\\panel.csproj|c:\\xampp\\htdocs\\web25-26\\c#\\panel\\panel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{549FFCE4-3D32-4BE2-976B-16F012158BE7}|panel\\panel.csproj|solutionrelative:panel\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{549FFCE4-3D32-4BE2-976B-16F012158BE7}|panel\\panel.csproj|c:\\xampp\\htdocs\\web25-26\\c#\\panel\\panel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{549FFCE4-3D32-4BE2-976B-16F012158BE7}|panel\\panel.csproj|solutionrelative:panel\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 277,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\C#\\panel\\panel\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "panel\\MainWindow.xaml",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\C#\\panel\\panel\\MainWindow.xaml",
+              "RelativeToolTip": "panel\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-20T09:01:15.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\C#\\panel\\panel\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "panel\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\C#\\panel\\panel\\MainWindow.xaml.cs",
+              "RelativeToolTip": "panel\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T09:01:13.28Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
