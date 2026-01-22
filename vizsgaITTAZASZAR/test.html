@@ -11,27 +11,89 @@
       crossorigin="anonymous"
     />
 </head>
+<style>
+  body {
+      margin: 0;
+      font-family: "Franklin Gothic Medium", Arial, sans-serif;
+      color: black;
+      
+      user-select: none;
+    }
+      .background {
+      position: fixed;
+      inset: 0;
+      background: url(kepek/kezdoHatter.jpg) center / cover no-repeat;
+
+      z-index: -2;
+    }
+     .fejlec {
+      background-color: rgb(70, 70, 70);
+
+    }
+    /* DESKTOP */
+    @media (min-width: 992px) {
+      .cim{
+        font-size: 3rem;
+      }
+      .quickLinks {
+        font-size: 1rem;
+        color: white;
+      }
+      .quickLinks:hover {
+        border-radius: 15%;
+        background-color: rgba(128, 128, 128, 0.288);
+        color: black;
+      }
+    }
+
+    /* MOBIL */
+    @media (max-width: 991px) {
+      .cim{
+        font-size: 1.5rem;
+      }
+      .fejlec {
+      
+        font-size: 1rem;
+        
+      }
+      .quickLinks {
+        color: rgb(255, 255, 255);
+        
+      }
+
+
+    }
+    .quickLinks {
+      text-decoration: none;
+
+      transition: all 0.25s ease;
+    }
+          .tartalom1{
+       background-color: rgba(71, 71, 71, 0.274);
+      }
+</style>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="background"></div>
+<nav class="navbar navbar-expand-md fejlec navbar-dark py-4 fixed-top">
   <div class="container-fluid">
     <div class="d-flex w-100 align-items-center justify-content-between">
       
       <!-- Bal oldal: Quick Links (desktop), mobilban hamburgerbe -->
-      <div class="d-flex align-items-center">
-        <button class="navbar-toggler d-md-none me-2" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="d-flex justify-content-start">
+        <button class="navbar-toggler d-md-none " type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="d-none d-md-flex">
-          <a href="#" class="nav-link text-white me-3">Home</a>
-          <a href="#" class="nav-link text-white me-3">Link</a>
-          <a href="#" class="nav-link text-white">Disabled</a>
+          <a href="#" class="nav-link quickLinks">Home</a>
+          <a href="#" class="nav-link quickLinks">Link</a>
+          <a href="#footer" class="nav-link quickLinks">Elérhetőségek</a>
         </div>
       </div>
 
       <!-- Középső cím -->
-      <div class="d-flex justify-content-center flex-grow-1">
-        <a class="navbar-brand mb-0" href="#">Tanterem</a>
-      </div>
+<a class="navbar-brand position-absolute start-50 cim translate-middle-x" href="#">
+  Tanterem
+</a>
 
       <!-- Jobb oldal: Belépés gomb -->
       <div class="d-flex align-items-center">
@@ -43,22 +105,152 @@
 
   <!-- Mobil menü -->
   <div class="collapse navbar-collapse d-md-none" id="mobileMenu">
-    <div class="d-flex flex-column p-2">
-      <a href="#" class="nav-link py-2">Home</a>
-      <a href="#" class="nav-link py-2">Link</a>
-      <a href="#" class="nav-link py-2">Disabled</a>
+    <div class="d-flex d-md-none flex-column p-2">
+      <a href="#" class="nav-link quickLinks">Home</a>
+      <a href="#" class="nav-link quickLinks">Link</a>
+      <a href="#footer" class="nav-link quickLinks">Elérhetőségek</a>
     </div>
   </div>
 </nav>
 
+<main class="container-fluid mt-5 pt-5">
 
-<main class="container">
-  <div class="bg-light p-5 rounded">
-    <h1>Navbar example</h1>
-    <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser’s viewport.</p>
-    <a class="btn btn-lg btn-primary" href="/docs/5.0/components/navbar/" role="button">View navbar docs »</a>
-  </div>
+  <!-- HERO -->
+  <section class="text-center  text-white">
+    <div class="container tartalom1 py-5">
+      <h1 class="display-4 fw-bold">Digitális Tanterem</h1>
+      <p class="lead mt-3">
+        Modern oktatási platform tanároknak és diákoknak.
+      </p>
+      <a href="#" class="btn btn-primary btn-lg me-2">Regisztráció</a>
+      <a href="#" class="btn btn-outline-light btn-lg">Tudj meg többet</a>
+    </div>
+  </section>
+
+  <!-- FUNKCIÓK -->
+  <section class="container my-5">
+    <div class="row text-center">
+      <h2 class="mb-4">Fő funkciók</h2>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">📚 Online tananyag</h5>
+            <p class="card-text">
+              Digitális jegyzetek, videók és prezentációk egy helyen.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">📝 Feladatkezelés</h5>
+            <p class="card-text">
+              Házi feladatok feltöltése, határidők, automatikus értékelés.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <div class="card-body">
+            <h5 class="card-title">💬 Kommunikáció</h5>
+            <p class="card-text">
+              Chat, értesítések és csoportos üzenetek.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KÉP + SZÖVEG -->
+  <section class="container my-5">
+    <div class="row align-items-center">
+      <div class="col-md-6 mb-3">
+        <img src="https://picsum.photos/600/400" class="img-fluid rounded shadow" alt="Oktatás">
+      </div>
+      <div class="col-md-6">
+        <h2>Miért a Tanterem?</h2>
+        <p>
+          A Tanterem célja, hogy egyszerűvé és hatékonnyá tegye az online oktatást.
+          Könnyen kezelhető felület, modern dizájn és gyors működés.
+        </p>
+        <ul>
+          <li>Reszponzív felület</li>
+          <li>Biztonságos bejelentkezés</li>
+          <li>Tanár–diák együttműködés</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+
 </main>
+  <!-- STATISZTIKÁK -->
+  <section class="bg-light py-5">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>120+</h2>
+          <p>Tantárgy</p>
+        </div>
+        <div class="col-md-3">
+          <h2>45</h2>
+          <p>Oktató</p>
+        </div>
+        <div class="col-md-3">
+          <h2>800+</h2>
+          <p>Diák</p>
+        </div>
+        <div class="col-md-3">
+          <h2>24/7</h2>
+          <p>Elérhetőség</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- FOOTER -->
+<footer class="bg-dark text-light py-4" id="footer">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4 mb-3">
+        <h5>Tanterem</h5>
+        <p>
+          Digitális oktatási rendszer a modern iskolák számára.
+        </p>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>Gyors linkek</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Kezdőlap</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Funkciók</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Kapcsolat</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <h5>Kapcsolat</h5>
+        <p>Email: info@tanterem.hu</p>
+        <p>Telefon: +36 30 123 4567</p>
+      </div>
+
+    </div>
+
+    <hr>
+    <p class="text-center mb-0">
+      © 2026 Tanterem – Minden jog fenntartva
+    </p>
+  </div>
+</footer>
+
+
 
     <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
@@ -70,10 +262,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>
-        <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>
-            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>
-                <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>
-                    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam quos sapiente placeat labore laudantium mollitia dignissimos corporis doloremque, laboriosam ex praesentium saepe, itaque adipisci vel nostrum beatae, dolorem similique maxime.</div>
+
+
 </body>
 </html>
