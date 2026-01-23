@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tanterem – Főoldal</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --navbar-height: 72px;
+        --sidebar-collapsed: 60px;
+        --sidebar-expanded: 240px;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Franklin Gothic Medium", Arial, sans-serif;
+        user-select: none;
+        overflow-x: hidden;
+      }
+
+      /* Background */
+      .background {
+        position: fixed;
+        inset: 0;
+        background: url(kepek/asd.jpg) center / cover no-repeat;
+        z-index: -2;
+        pointer-events: none;
+      }
+
+      /* Navbar */
+      .navbar {
+        position: sticky;
+        top: 0;
+        height: var(--navbar-height);
+        z-index: 1050;
+        background-color: rgb(70, 70, 70);
+      }
+
+      /* Hamburger */
+      #hamburgerBtn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.4rem;
+        background: none;
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+
+      #hamburgerBtn:hover {
+        background-color: rgba(128, 128, 128, 0.3);
+        border-radius: 6px;
+      }
+
+      /* Sidebar */
+      #sidebar {
+        position: fixed;
+        top: var(--navbar-height);
+        left: 0;
+        height: calc(100vh - var(--navbar-height));
+        width: var(--sidebar-collapsed);
+        background-color: rgba(50, 50, 50, 0.618);
+        color: white;
+        transition: width 0.3s ease;
+        z-index: 1040;
+        overflow-x: hidden;
+      }
+
+      #sidebar.expanded {
+        width: var(--sidebar-expanded);
+      }
+
+      #sidebar a {
+        height: 44px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 12px;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      #sidebar a:hover {
+        background-color: rgba(128, 128, 128, 0.3);
+        border-radius: 6px;
+      }
+
+      #sidebar a span:last-child {
+        display: none;
+      }
+
+      #sidebar.expanded a span:last-child {
+        display: inline;
+      }
+
+      .sidebarSzoveg {
+        font-size: 0.8rem;
+      }
+
+      /* Content */
+      #content {
+        margin-left: var(--sidebar-collapsed);
+        padding: 2rem;
+        transition: margin-left 0.3s ease;
+        min-height: 100vh;
+      }
+
+      #content.shifted {
+        margin-left: var(--sidebar-expanded);
+      }
+
+      .tartalmiResz {
+        background-color: rgba(155, 155, 155, 0.231);
+        backdrop-filter: blur(2px);
+        border-radius: 2%;
+        color: white;
+      }
+
+      /* Avatar */
+      .avatar {
+        width: clamp(32px, 3vw, 40px);
+        height: clamp(32px, 3vw, 40px);
+        border-radius: 50%;
+        object-fit: cover;
+        cursor: pointer;
+      }
+
+      .profile-menu {
+        min-width: clamp(220px, 20vw, 300px);
+        padding: 1rem;
+        border-radius: 12px;
+        background-color: rgba(255, 255, 255, 0.837);
+      }
+
+      .profile-avatar-large {
+        width: clamp(48px, 5vw, 64px);
+        height: clamp(48px, 5vw, 64px);
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .kozepsoCim {
+        font-size: 2rem;
+      }
+
+      /* ===== MOBIL SIDEBAR ===== */
+      @media (max-width: 768px) {
+        #sidebar {
+          width: 0;
+        }
+
+        #sidebar.expanded {
+          width: var(--sidebar-collapsed);
+        }
+
+        #content {
+          margin-left: 0;
+        }
+        #sidebar a span:last-child { display: none !important; /* szöveg soha mobilon */ }
+
+        #content.shifted {
+          margin-left: var(--sidebar-collapsed);
+        }
+      }
+
+      /* Cards */
+      .card {
+        border-radius: 12px;
+        color: rgb(229, 229, 229);
+        cursor: pointer;
+        background-color: rgb(75, 75, 75);
+      }
+
+      @media (min-width: 768px) {
+        .card:hover {
+          background-color: rgb(235, 235, 235);
+          color: rgb(35, 35, 35);
+          transition: all 0.3s ease;
+        }
+      }
+
+      .card-title {
+        font-weight: 600;
+      }
+      .kisKepKeret{
+        background-color: rgb(170, 170, 170);
+        border-radius: 50%;
+      }
+      .dropdown-item:hover{
+        background-color: rgb(134, 134, 134);
+        border-radius: 5%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar px-3">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <button id="hamburgerBtn">&#9776;</button>
+
+        <span class="navbar-brand mb-0 h1 kozepsoCim text-white text-center flex-grow-1">
+          Tanterem
+        </span>
+
+        <div class="dropdown kisKepKeret p-1">
+          <img
+            src="kepek/profilKep.jpg"
+            class="avatar"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          />
+
+          <div class="dropdown-menu dropdown-menu-end profile-menu">
+            <div class="text-center">
+              <img src="kepek/profilKep.jpg" class="profile-avatar-large mb-2" />
+              <h6 class="mb-0">Cigány</h6>
+              <small class="text-muted">IHAROS@example.com</small>
+            </div>
+
+            <hr />
+            <button class="dropdown-item">Fiók váltása</button>
+            <button class="dropdown-item">Saját fiók</button>
+            <hr />
+            <button class="dropdown-item text-danger">Kijelentkezés</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <hr />
+      <a href="#"><span>🏠</span><span class="sidebarSzoveg">Főoldal</span></a>
+      <hr />
+      <a href="#"><span>📚</span><span class="sidebarSzoveg">Tananyag</span></a>
+      <hr />
+      <a href="#"><span>📝</span><span class="sidebarSzoveg">Feladatok</span></a>
+      <hr />
+      <a href="#"><span>💬</span><span class="sidebarSzoveg">Üzenetek</span></a>
+      <hr />
+    </div>
+
+    <!-- Content -->
+    <div id="content">
+      <div class="tartalmiResz p-4">
+        <div class="row g-4">
+
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+            <div class="card h-100 shadow">
+              <div class="card-body">
+                <h5 class="card-title">📚 Tananyagok</h5>
+                <p class="card-text">
+                  Elérhető tananyagok, jegyzetek és videók.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- további kártyák változatlanul -->
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const btn = document.getElementById("hamburgerBtn");
+      const sidebar = document.getElementById("sidebar");
+      const content = document.getElementById("content");
+
+      btn.addEventListener("click", () => {
+        sidebar.classList.toggle("expanded");
+        content.classList.toggle("shifted");
+      });
+    </script>
+  </body>
+</html>
