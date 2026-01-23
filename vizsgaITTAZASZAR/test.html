@@ -71,6 +71,15 @@
           .tartalom1{
        background-color: rgba(71, 71, 71, 0.274);
       }
+              .equal-col {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .equal-bottom {
+            margin-top: auto;
+        }
+
 </style>
 <body>
   <div class="background"></div>
@@ -122,8 +131,82 @@
       <p class="lead mt-3">
         Modern oktatási platform tanároknak és diákoknak.
       </p>
-      <a href="#" class="btn btn-primary btn-lg me-2">Regisztráció</a>
-      <a href="#" class="btn btn-outline-light btn-lg">Tudj meg többet</a>
+   
+      <!-- Tudj meg többet gomb -->
+<a href="#moreInfo" class="btn btn-outline-light btn-lg" data-bs-toggle="collapse">Tudj meg többet</a>
+
+<!-- Collapsible tartalom -->
+<div class="collapse mt-4" id="moreInfo">
+  <div class="row">
+
+    <!-- Hogyan működik -->
+    <div class="col-md-4 p-3 fs-5">
+      <div class="equal-col">
+        <div class="text-center fs-4">Hogyan működik?</div>
+        <hr>
+        <div class="alCim">A Tanterem használata egyszerű és gyors.</div> 
+        <br>
+        ♢ Regisztráció és belépés – A felhasználók egyszerűen létrehozhatják saját fiókjukat, majd beléphetnek az online tanterembe.
+        <br> <br>
+        ♢ Osztály/kurzus létrehozása – A tanárok egy gombnyomással új kurzust hozhatnak létre, amelyhez automatikusan kurzuskód is generálódik.
+        <br><br>
+        ♢ Tanulók meghívása – A résztvevők könnyedén csatlakozhatnak meghívólink vagy kód segítségével.
+        <br><br>
+        ♢ Tananyagok feltöltése – Dokumentumok, videók, prezentációk és egyéb tananyagok gyorsan feltölthetők és rendszerezhetők.
+        <br><br>
+        ♢ Feladatok kezelése – A tanárok feladatokat, házikat és projekteket adhatnak ki határidővel együtt, a diákok pedig ugyanitt adhatják le.
+        <br><br>
+        ♢ Kommunikáció – Beépített üzenetküldés és csoportos kommunikáció teszi gördülékennyé az együttműködést.
+        <br><br>
+        ♢ Értékelés és visszajelzés – Minden beadott feladatnál részletes értékelés és pontozás adható, statisztikai nézettel kiegészítve.
+        <div class="equal-bottom"><hr></div>
+      </div>
+    </div>
+
+    <!-- Miért érdemes használni -->
+    <div class="col-md-4 p-3 fs-5">
+      <div class="equal-col">
+        <div class="text-center fs-4">Miért érdemes használni?</div>
+        <hr>
+        ♢ Átlátható – Minden tananyag, feladat és beadás strukturált, könnyen áttekinthető formában jelenik meg.
+        <br>
+        ♢ Időt takarít meg – Automatikus emlékeztetők és határidő-kezelés segítik a tanárok és diákok munkáját.
+        <br>
+        ♢ Könnyű együttműködés – Valós idejű kommunikáció, csoportos üzenetek és megbeszélések támogatása.
+        <br>
+        ♢ Bárhonnan elérhető – Mobilról, tabletről és számítógépről is teljes funkcionalitással működik.
+        <br>
+        ♢ Biztonságos – A rendszer kiemelten kezeli a felhasználói adatok védelmét és titkosítását.
+        <br>
+        ♢ Rugalmas – Iskolai órákhoz, céges képzésekhez, tanfolyamokhoz és workshopokhoz is alkalmazkodik.
+        <div class="equal-bottom"><hr></div>
+      </div>
+    </div>
+
+    <!-- Funkciók -->
+    <div class="col-md-4 p-3 fs-5">
+      <div class="equal-col">
+        <div class="text-center fs-4">Funkciók</div>
+        <hr>
+        ♢ Osztályok és kurzusok létrehozása – Könnyen kezelhető felület új tantermek és képzések létrehozásához.
+        <br>
+        ♢ Feladatkezelő rendszer – Határidős feladatkiadás, beadás és automatikus értesítések.
+        <br>
+        ♢ Tananyag-tár – Központi hely a dokumentumok, videók és egyéb tananyagok tárolására.
+        <br>
+        ♢ Üzenetküldő és fórum – Beépített kommunikáció a csoporton belüli együttműködéshez.
+        <br>
+        ♢ Értékelési modul – Pontozás, visszajelzések, statisztikák és teljesítménykövetés.
+        <br>
+        ♢ Értesítések – Automatikus rendszerüzenetek minden változásról és határidőről.
+        <br>
+        ♢ Integrációk – Külső eszközök, videóhívások és dokumentummegosztók zökkenőmentes kapcsolódása.
+        <div class="equal-bottom"><hr></div>
+      </div>
+    </div>
+
+  </div>
+</div>
     </div>
   </section>
 

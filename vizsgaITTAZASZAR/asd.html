@@ -13,6 +13,7 @@
       font-family: "Franklin Gothic Medium", Arial, sans-serif;
       color: white;
       overflow: hidden;
+      user-select: none;
     }
 
     /* háttér */
@@ -38,6 +39,7 @@
     /* konténer */
     .role-row {
       height: 100vh;
+        overflow: hidden;
     }
 
     /* panelek */
@@ -47,9 +49,9 @@
       justify-content: center;
       align-items: center;
       font-size: 6rem;
-      
+      position: relative;
       transition: transform 1.2s ease, opacity .6s ease, background .3s ease;
-      user-select: none;
+      
     }
 
     .kijeloles:hover {
@@ -177,7 +179,7 @@
 <div id="loginBox" class="login-box text-light p-4">
   <h4 class="text-center mb-3">Profil létrehozás</h4>
   <input class="form-control mb-2" placeholder="Felhasználónév">
-  <input class="form-control mb-3" type="password" placeholder="Jelszó">
+  <input class="form-control mb-2" type="password" placeholder="Jelszó">
   <input class="form-control mb-3" type="email" placeholder="Email">
   <button class="btn btn-outline-light w-100">Regisztráció</button>
 </div>
