@@ -426,7 +426,7 @@
     <!-- Sidebar -->
     <div id="sidebar">
       <hr />
-      <a href="valodiFoOldal.html"><span>🏠︎</span><span class="sidebarSzoveg">Főoldal</span></a>
+      <a href="#"><span>🏠︎</span><span class="sidebarSzoveg">Főoldal</span></a>
       <hr />
       <a href="#"><span>🕮</span><span class="sidebarSzoveg">Tananyag</span></a>
       <hr />
@@ -474,23 +474,18 @@
 
     <!-- Content -->
     <div id="content">
-      <div class="tartalmiResz  p-4" id="contentInner">
+      <div class="tartalmiResz p-4">
         <div class="row g-4">
-
-
-<div style="text-decoration: none;" class="col-12 col-sm-6 col-lg-3" onclick="loadTananyag('bevezetes.html')">
+<div class="col-12 col-sm-6 col-lg-3">
   <div class="card h-100 shadow content-card" data-page="tananyag">
     <div class="card-body">
-      <h5 class="card-title">Programozás 13.C</h5>
-      <hr>
+      <h5 class="card-title">📚 Tananyagok</h5>
       <p class="card-text">
-        Dr. Deszka Dávid
+        Elérhető tananyagok, jegyzetek és videók.
       </p>
     </div>
   </div>
 </div>
-
-
           <div class="col-12 col-sm-6 col-lg-3">
             <div class="card h-100 shadow">
               <div class="card-body">
@@ -561,6 +556,7 @@
               </div>
             </div>
           </div>
+          
           <!-- további kártyák változatlanul -->
         </div>
       </div>
@@ -594,40 +590,6 @@
           localStorage.setItem("theme", "dark");
         }
       });
-
-
-      function loadTananyag(file) {
-        
-  fetch(`tananyagok/${file}`)
-    .then(response => {
-      if (!response.ok) throw new Error("Nem található");
-      return response.text();
-    })
-    .then(html => {
-      document.getElementById("contentInner").innerHTML = html;
-      history.pushState({ file }, "", `?tananyag=${file}`);
-    })
-    .catch(err => {
-      document.getElementById("contentInner").innerHTML =
-        "<p>❌ Hiba a tananyag betöltésekor.</p>";
-    });
-}
-
-/* Vissza gomb kezelése */
-window.addEventListener("popstate", e => {
-  if (e.state?.file) {
-    loadTananyag(e.state.file);
-  }
-});
-
-/* Oldal betöltés URL-ből */
-window.addEventListener("load", () => {
-  const params = new URLSearchParams(window.location.search);
-  const file = params.get("tananyag");
-  if (file) loadTananyag(file);
-});
-
-
     </script>
   </body>
 </html>
