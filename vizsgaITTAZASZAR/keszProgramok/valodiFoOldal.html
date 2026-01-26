@@ -35,18 +35,19 @@
       }
 
       body.light .tartalmiResz {
-        background-color: rgba(255, 255, 255, 0.511);
+        background-color: rgba(255, 255, 255, 0.356);
       
       }
 
       body.light .card {
         background-color: #eaeaea;
-        color: #222;
+        color: #333333;
       }
 
-      body.light .card:hover {
+      body.light .card:not(.HoverNot):hover {
         background-color: #747474;
         color: #eaeaea;
+        cursor: pointer;
       }
       body.light .background {
   background: url(kepek/kezdoHatter2.jpg) center / cover no-repeat;
@@ -69,7 +70,7 @@
       .background {
         position: fixed;
         inset: 0;
-        background: url(kepek/asd.jpg) center / cover no-repeat;
+        background: url(kepek/asd2.jpg) center / cover no-repeat;
         z-index: -2;
         pointer-events: none;
       }
@@ -150,7 +151,7 @@
       }
 
       .sidebarSzoveg {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-family: 'Courier New', Courier, monospace;
       }
 
@@ -170,7 +171,7 @@
         background-color: rgba(155, 155, 155, 0.231);
         backdrop-filter: blur(2px);
         border-radius: 2%;
-        color: white;
+       
       }
 
       /* Avatar */
@@ -199,9 +200,21 @@
       .kozepsoCim {
         font-size: 2rem;
       }
-
+                .card:not(.HoverNot):hover {
+          background-color: rgb(235, 235, 235);
+          color: rgb(35, 35, 35);
+          transition: all 0.3s ease;
+        cursor: pointer;}
       /* ===== MOBIL SIDEBAR ===== */
       @media (max-width: 768px) {
+
+                .card:not(.HoverNot):hover {
+          background-color: rgb(235, 235, 235);
+          color: rgb(35, 35, 35);
+          transition: all 0.3s ease;
+        cursor: pointer;
+
+        }
         #sidebar {
           width: 0;
         }
@@ -226,17 +239,10 @@
       .card {
         border-radius: 12px;
         color: rgb(229, 229, 229);
-        cursor: pointer;
+        
         background-color: rgb(75, 75, 75);
       }
 
-      @media (min-width: 768px) {
-        .card:hover {
-          background-color: rgb(235, 235, 235);
-          color: rgb(35, 35, 35);
-          transition: all 0.3s ease;
-        }
-      }
 
       .card-title {
         font-weight: 600;
@@ -427,12 +433,27 @@
     <div id="sidebar">
       <hr />
       <a href="valodiFoOldal.html"><span>🏠︎</span><span class="sidebarSzoveg">Főoldal</span></a>
+      
+      <div data-role="teacher">
       <hr />
-      <a href="#"><span>🕮</span><span class="sidebarSzoveg">Tananyag</span></a>
+      <a href="#"  onclick="loadTananyag('kurzusLetrehozas.html')"><span>✙</span><span class="sidebarSzoveg">Kurzus létrehozás</span></a>  
+      </div>
+
+            <div data-role="student">
       <hr />
+      <a href="#"  onclick="loadTananyag('kurzushozValoCsatlakozas.html')"><span>➢</span><span class="sidebarSzoveg">Csatlakozás kurzushoz</span></a>  
+      </div>
+
+      <div data-role="student">
+      <hr />
+      <a href="#"><span>🕮</span><span class="sidebarSzoveg">Tananyag</span></a>  
+      </div>
+      <hr />
+
       <a href="#"
         ><span>🗐</span><span class="sidebarSzoveg">Feladatok</span></a
       >
+      
       <hr />
       <a href="#"><span>✉︎</span><span class="sidebarSzoveg">Üzenetek</span></a>
       <hr />
@@ -478,10 +499,15 @@
         <div class="row g-4">
 
 
-<div style="text-decoration: none;" class="col-12 col-sm-6 col-lg-3" onclick="loadTananyag('bevezetes.html')">
+<div style="text-decoration: none;" data-role="student" class="col-12 col-sm-6 col-lg-3" onclick="loadTananyag('bevezetes.html')">
   <div class="card h-100 shadow content-card" data-page="tananyag">
     <div class="card-body">
-      <h5 class="card-title">Programozás 13.C</h5>
+
+<h5 class="card-title d-flex align-items-center justify-content-between">
+  Programozás 13.C
+  <img src="kepek/profilkKep.jpg" class="avatar d-flex"/>
+</h5>
+
       <hr>
       <p class="card-text">
         Dr. Deszka Dávid
@@ -491,76 +517,41 @@
 </div>
 
 
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-lg-3">
-            <div class="card h-100 shadow">
-              <div class="card-body">
-                <h5 class="card-title">📚 Tananyagok</h5>
-                <p class="card-text">
-                  Elérhető tananyagok, jegyzetek és videók.
-                </p>
-              </div>
-            </div>
-          </div>
+
+<div style="text-decoration: none;" data-role="student" class="col-12 col-sm-6 col-lg-3" onclick="loadTananyag('bevezetes.html')">
+  <div class="card h-100 shadow content-card" data-page="tananyag">
+    <div class="card-body">
+
+<h5 class="card-title d-flex align-items-center justify-content-between">
+  Programozás 13.C
+  <img src="kepek/profilKep.jpg" class="avatar d-flex"/>
+</h5>
+
+      <hr>
+      <p class="card-text">
+        Dr. Deszka Dávid
+      </p>
+    </div>
+  </div>
+</div>
+
+<div data-role="teacher" class="col-12 col-sm-6 col-lg-3 tananyagHozzaadasGomb" onclick="loadTananyag('kurzusLetrehozas.html')">
+  <div class="card h-100 shadow content-card" data-page="tananyag">
+    <div class="card-body">
+      <h5 class="card-title">Kurzus létrehozása</h5>
+      <hr>
+      <p class="card-text text-center">
+        +
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
           <!-- további kártyák változatlanul -->
         </div>
       </div>
@@ -568,6 +559,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+const userRole = "student"; // "teacher"
+function applyRole(role) {
+  document.querySelectorAll("[data-role]").forEach(el => {
+    const roles = el.dataset.role.split(" ");
+    el.style.display = roles.includes(role) ? "" : "none";
+  });
+}
+
+applyRole(userRole);
+
+
       const btn = document.getElementById("hamburgerBtn");
       const sidebar = document.getElementById("sidebar");
       const content = document.getElementById("content");
