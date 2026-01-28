@@ -1,151 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-
-    
-<style>
-    body{
-        background-color: rgb(39, 41, 46);
-        user-select: none;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        
-    }
-    .koltoDoboz{
-        background-color: rgba(255, 255, 255, 0.479);
-    }
-    .koltoHelye{
-        background-color: rgb(92, 92, 92);
-    }
-        .versHelye{
-        background-color: rgb(109, 109, 109);
-    }
-    .versDoboz{
-       background-color: rgba(255, 255, 255, 0.479);
-    }
-
-    .fejlec{
-         background-color: rgb(39, 41, 46);
-    }
-</style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(39, 41, 46);
+            font-family: 'Trebuchet MS', sans-serif;
+            user-select: none;
+        }
+        .koltoDoboz, .versDoboz {
+            background-color: rgba(255, 255, 255, 0.479);
+        }
+        .koltoHelye {
+            background-color: rgb(92, 92, 92);
+        }
+        .versHelye {
+            background-color: rgb(109, 109, 109);
+        }
+        .fejlec {
+            background-color: rgb(39, 41, 46);
+        }
+        .kolto-item {
+            cursor: pointer;
+        }
+        .kolto-item:hover {
+            background-color: rgb(70, 70, 70);
+        }
+        pre {
+            white-space: pre-wrap;
+        }
+        #valaszthatoVersek{
+            cursor: pointer;
+         
+            
+        }
+        #valaszthatoVersek:hover{
+            background-color: rgba(247, 247, 247, 0.493);
+        }
+    </style>
 </head>
-<body>
+<body onload="        randomVersDarab();
+        koltokLe();">
 
 <nav class="fejlec text-light p-3">
-  <div>
-    <div style="font-style: italic;">„Randomfafsafafsafsdasdsadsafdsaf idézet”</div>
-    <div>Költő neve – Cím (Év)</div>
-  </div>
-
-
+    <div>
+        <div style="font-style: italic;">„Random idézet”</div>
+        <div>Költő neve cim ev</div>
+    </div>
 </nav>
 
-
-<div class="container-fluid bg-dark ">
+<div class="container-fluid bg-dark">
     <div class="row">
-        <!-- Bal oldal-->
-        <div class="col-3 koltoHelye">
-              <!-- költokHelye-->
-                        <div class="row">
-            <div class="col-12 p-3 "><div class="p-2 koltoDoboz card"><div class="p-2">
-                <h3 class="d-flex justify-content-center">Költők</h3><hr>
-                <div class="p-2 koltok">adas</div>
-                <div class="p-2 koltok">adas</div>
-                <div class="p-2 koltok">adas</div>
-                
-            
-            </div></div></div>
 
-
-  </div>
+        <!-- BALLL oldal -->
+        <div class="col-lg-3 col-12 koltoHelye p-3">
+            <div class="koltoDoboz card p-2">
+                <h3 class="d-flex justify-content-center">Költők</h3>
+                <hr>
+                <div class="koltok"></div>
+            </div>
         </div>
 
-        <!-- Jobb oldal -->
-        <div class="col-9 versHelye">
-              <!-- Versekhelye-->
+       <!-- JOBB oldal -->
+        <div class="col-lg-9 col-12 versHelye p-3">
             <div class="row">
 
-            <div class="col-12 col-lg-6 p-3 "><div class="p-2 versDoboz card"><h3 class="d-flex justify-content-center">PeldaCim</h3><hr>
-            <div class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aliquid quo ipsam cupiditate aliquam aut, id, quas ea repellat, molestias omnis excepturi earum ratione quam rerum quidem ut debitis! Molestiae?</div>
-            <div class="d-flex justify-content-end p-2">peldaDatum</div></div></div>
- 
-<div class="col-12 col-lg-6 p-3 "><div class="p-2 versDoboz card"><h3 class="d-flex justify-content-center">PeldaCim</h3><hr>
-            <div class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aliquid quo ipsam cupiditate aliquam aut, id, quas ea repellat, molestias omnis excepturi earum ratione quam rerum quidem ut debitis! Molestiae?</div>
-            <div class="d-flex justify-content-end p-2">peldaDatum</div></div></div>
-
-            <div class="col-12 col-lg-6 p-3 "><div class="p-2 versDoboz card"><h3 class="d-flex justify-content-center">PeldaCim</h3><hr>
-            <div class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aliquid quo ipsam cupiditate aliquam aut, id, quas ea repellat, molestias omnis excepturi earum ratione quam rerum quidem ut debitis! Molestiae?</div>
-            <div class="d-flex justify-content-end p-2">peldaDatum</div></div></div>
-
-            <div class="col-12 col-lg-6 p-3 "><div class="p-2 versDoboz card"><h3 class="d-flex justify-content-center">PeldaCim</h3><hr>
-            <div class="p-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere aliquid quo ipsam cupiditate aliquam aut, id, quas ea repellat, molestias omnis excepturi earum ratione quam rerum quidem ut debitis! Molestiae?</div>
-            <div class="d-flex justify-content-end p-2">peldaDatum</div></div></div>
-
-
-             <!-- KIVALASZTOTT KOLTO ADATAI-->
-            <div class="col-12 p-3 "><div class="p-2 versDoboz card"><h3 class="d-flex justify-content-center">KoltoNeve</h3><hr>
-            <div class="p-2">
-                <div>A kolto adatai</div>
-                <div>A kolto adatai</div>
-                <div>A kolto adatai</div>
-                <div>A kolto adatai</div>
-            </div>
-            <hr>
-            <h5>Versei:
-                
-            </h5><ul>
-                    <li class="koltoVersei">asfdsaf</li>
-                    <li class="koltoVersei">asfdsaf</li>
-                    <li class="koltoVersei">asfdsaf</li>
-                    <li class="koltoVersei">asfdsaf</li>
-                    <li class="koltoVersei">asfdsaf</li>
-                    <li class="koltoVersei">asfdsaf</li>
-
-                </ul>
-            
-           
-        </div></div>
-
-<!-- KIVALASZTOTT VERS-->
-            <div class="col-12 p-3 "><div class="p-2 versDoboz card">
-           
-        <h4>Kiválasztott verseCíme</h4>
-        <hr>
-        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta labore, aliquid eius, aut, iusto iste voluptatum nulla quo quidem molestias in architecto! Atque omnis, doloremque suscipit quo quia veniam officia.</div>
-        </div></div>
+             
+                <div class="row col-12" id="randomVersContainer"></div>
 
             
+                <div class="col-12 p-3">
+                    <div class="versDoboz card p-2">
+                        <h3 class="d-flex justify-content-center" id="koltoNev">Költő neve</h3>
+                        <hr>
+                        <div id="koltoAdatok">
+                            <div>Születési dátum: -</div>
+                            <div>Születési hely: -</div>
+                            <div>Halálozási dátum: -</div>
+                            <div>Halálozási hely: -</div>
+                            <div>Életrajz: -</div>
+                        </div>
+                        <hr>
+                        <h5>Versei:</h5>
+                        <ul id="koltoVerseiList"></ul>
+                    </div>
+                </div>
+
+                <!-- Kiválasztott vers -->
+                <div class="col-12 p-3">
+                    <div class="versDoboz card p-2">
+                        <h4 id="versCim">VersCíme</h4>
+                        <hr>
+                        <div id="versSzoveg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ipsa repellendus assumenda fugit velit, magni, nulla numquam ab quam dicta aperiam aut eius eaque explicabo impedit dolorem quaerat beatae consequuntur.</div>
+                    </div>
+                </div>
+
             </div>
         </div>
-  
+
+    </div>
 </div>
 
-
-
-
-    <footer class="bg-dark text-light py-4" >
-  <div class="container">
-    <div class="row">
-
-      <div class="col-md-4 mb-3">
-    
-
-
-    
+<footer class="bg-dark text-light py-4">
+    <div class="container text-center">
+        <p class="mb-0">Szakács Tamás – 2026.01.28</p>
     </div>
-
-    <hr>
-    <p class="text-center mb-0">
-Szakács Tamás       2026.01.28 
-    </p>
-  </div>
 </footer>
 
+<script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    function randomVersDarab() {
+    fetch("api.php/versek/4")
+        .then(x => x.json())
+        .then(valasz => {
+            const container = document.getElementById("randomVersContainer");
+            container.innerHTML = "";
+            console.log(valasz)
+       
+            const versek = Array.isArray(valasz) ? valasz : [valasz];
+
+            versek.forEach(vers => {
+                const div = document.createElement("div");
+                div.classList.add("col-12", "col-lg-6", "p-3"); 
+                div.innerHTML = `
+                    <div class="versDoboz card p-2">
+                        <h5 class="text-center">${vers.cim}</h5>
+                        <pre>${vers.versszakok}</pre>
+                        <div class="text-end"  style="font-style: italic;">${vers.kolto_nev} - ${vers.megjelenes_eve}</div>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        });
+}
+
+    function koltokLe() {
+        fetch("api.php/kolto")
+            .then(x => x.json())
+            .then(valasz => {
+                const container = document.querySelector(".koltok");
+                container.innerHTML = "";
+                valasz.forEach(kolto => {
+                    const div = document.createElement("div");
+                    div.classList.add("p-2", "mb-1", "text-light", "kolto-item");
+                    div.textContent = kolto.nev;
+                    div.addEventListener("click", () => koltoLeId(kolto.id));
+                    container.appendChild(div);
+                });
+            });
+    }
+
+    function koltoLeId(id) {
+        fetch("api.php/kolto/" + id)
+            .then(x => x.json())
+            .then(valasz => {
+                if (!valasz.length) return;
+                const kolto = valasz[0];
+
+                document.getElementById("koltoNev").textContent = kolto.nev;
+                document.getElementById("koltoAdatok").innerHTML = `
+                    Születési dátum: ${kolto.szuletesi_datum}<br>
+                    Születési hely: ${kolto.szuletesi_hely}<br>
+                    Halálozási dátum: ${kolto.halalozi_datum || "-"}<br>
+                    Halálozási hely: ${kolto.halalozi_hely || "-"}<br>
+                    Életrajz: ${kolto.eletrajz || "-"}
+                `;
+
+                const ul = document.getElementById("koltoVerseiList");
+                ul.innerHTML = "";
+                valasz.forEach(v => {
+                    if (!v.vers_id) return;
+                    const li = document.createElement("li");
+                    li.textContent = `${v.cim} (${v.megjelenes_eve})`;
+                    
+                    li.setAttribute("id","valaszthatoVersek")
+                    li.addEventListener("click", () => kivVersId(v.vers_id));
+                    ul.appendChild(li);
+                });
+            });
+    }
+
+   
+    function kivVersId(id) {
+        fetch("api.php/vers/" + id)
+            .then(x => x.json())
+            .then(valasz => {
+                if (!valasz.length) return;
+                const vers = valasz[0];
+                document.getElementById("versCim").textContent = vers.cim;
+                document.getElementById("versSzoveg").innerHTML = `<pre>${vers.versszakok}</pre>`;
+            });
+    }
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
