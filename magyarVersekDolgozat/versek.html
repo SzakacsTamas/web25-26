@@ -6,10 +6,15 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        @font-face{
+            font-family: "furcsa";
+            src: url(DCC\ -\ Ash.otf);
+        }
         body {
             background-color: rgb(39, 41, 46);
-            font-family: 'Trebuchet MS', sans-serif;
+            font-family: "furcsa";
             user-select: none;
+            font-size: 1.5rem;
         }
         .koltoDoboz, .versDoboz {
             background-color: rgba(255, 255, 255, 0.479);
@@ -42,7 +47,8 @@
         }
     </style>
 </head>
-<body>
+<body onload="        randomVersDarab();
+        koltokLe();">
 
 <nav class="fejlec text-light p-3">
     <div>
@@ -54,7 +60,7 @@
 <div class="container-fluid bg-dark">
     <div class="row">
 
-        <!-- Bal oldal -->
+        <!-- BALLL oldal -->
         <div class="col-lg-3 col-12 koltoHelye p-3">
             <div class="koltoDoboz card p-2">
                 <h3 class="d-flex justify-content-center">Költők</h3>
@@ -117,7 +123,7 @@
         .then(valasz => {
             const container = document.getElementById("randomVersContainer");
             container.innerHTML = "";
-
+            console.log(valasz)
        
             const versek = Array.isArray(valasz) ? valasz : [valasz];
 
@@ -127,8 +133,8 @@
                 div.innerHTML = `
                     <div class="versDoboz card p-2">
                         <h5 class="text-center">${vers.cim}</h5>
-                        <pre>${vers.versszakok}</pre>
-                        <div class="text-end">${vers.megjelenes_eve} – ${vers.kolto_nev}</div>
+                        <p>${vers.versszakok}</p>
+                        <div class="text-end"  style="font-style: italic;">${vers.kolto_nev} - ${vers.megjelenes_eve}</div>
                     </div>
                 `;
                 container.appendChild(div);
@@ -194,11 +200,7 @@
             });
     }
 
-    // --------------- Betöltéskor indul ---------------
-    window.onload = () => {
-        randomVersDarab();
-        koltokLe();
-    };
+
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
