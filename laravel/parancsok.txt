@@ -1,0 +1,45 @@
+Létrehozás:
+composer create-project laravel/laravel projectNeve
+
+Belépés a projektben:
+cd projectNeve
+
+inditas:
+php artisan serve
+
+ÁTIRAS 
+.env-ben
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravel2 //Átirni a nevet
+DB_USERNAME=root
+DB_PASSWORD=
+-->
+php artisan migrate
+
+Alap Route
+routes/web.php
+Route::get('/', function () {
+    return view('welcome');
+});
+DUPLIKALNI -->
+Route::get('/randomNev', function () {
+    return view('randomNev');
+});
+AZTÁN resources/views/LÉTREHOZNI --> randomNev.blade.php (És beleirni valamit pl <?php echo "gags";?>)
+
+Teszteléls
+http://127.0.0.1:8000/randomMagamtol
+
+Vezérlő létrehpzása
+php artisan make:controller Api/TestController (Vagy bármi random)
+    public function index(){
+        return response()->json([
+            'status' => 'ok',
+            'message' => 'API működik'
+        ]);
+    }
+
+
