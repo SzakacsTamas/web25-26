@@ -1,3 +1,3 @@
-SELECT felhasznalo.veznev,felhasznalo.utonev,uzenet.tartalom, uzenet.kuldido, hirfolyam.megnevezes AS fasz
+SELECT felhasznalo.veznev,felhasznalo.utonev,uzenet.tartalom, uzenet.kuldido
 FROM felhasznalo, uzenet, hirfolyam
 WHERE felhasznalo.id =uzenet.f_id AND uzenet.tartalom LIKE CONCAT ("%", hirfolyam.megnevezes, "%")

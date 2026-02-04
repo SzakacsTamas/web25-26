@@ -1,0 +1,30 @@
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\bin\Debug\net8.0\konyvek.exe
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\bin\Debug\net8.0\konyvek.deps.json
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\bin\Debug\net8.0\konyvek.runtimeconfig.json
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\bin\Debug\net8.0\konyvek.dll
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\bin\Debug\net8.0\konyvek.pdb
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.GeneratedMSBuildEditorConfig.editorconfig
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.AssemblyInfoInputs.cache
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.AssemblyInfo.cs
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.csproj.CoreCompileInputs.cache
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.sourcelink.json
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.dll
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\refint\konyvek.dll
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.pdb
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\konyvek.genruntimeconfig.cache
+D:\munkakönyvtár\Szakacs Tamas 12.C\aaf2024-2025\konyvek\konyvek\obj\Debug\net8.0\ref\konyvek.dll
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\bin\Debug\net8.0\konyvek.exe
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\bin\Debug\net8.0\konyvek.deps.json
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\bin\Debug\net8.0\konyvek.runtimeconfig.json
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\bin\Debug\net8.0\konyvek.dll
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\bin\Debug\net8.0\konyvek.pdb
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.sourcelink.json
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.dll
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\refint\konyvek.dll
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.pdb
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\konyvek.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\C#\konyvek\konyvek\obj\Debug\net8.0\ref\konyvek.dll
