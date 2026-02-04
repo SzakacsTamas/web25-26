@@ -1,3 +1,3 @@
-SELECT MAX(ar) / MIN(ar) AS arány
-FROM hirdetes 
-WHERE hirdetes.allapot="meghirdetve"
+SELECT MAX(hirdetes.ar) / MIN(hirdetes.ar) AS arany
+FROM hirdetes
+WHERE allapot='meghirdetve'

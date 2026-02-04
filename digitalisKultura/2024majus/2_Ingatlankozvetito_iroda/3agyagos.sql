@@ -1,3 +1,3 @@
 SELECT ingatlan.hazszam, hirdetes.ar
 FROM ingatlan, hirdetes
-WHERE hirdetes.ingatlanid=ingatlan.id AND ingatlan.kozterulet="Agyagos utca"
+WHERE ingatlan.id=hirdetes.ingatlanid AND ingatlan.kozterulet = "Agyagos utca" AND hirdetes.allapot = "meghirdetve"

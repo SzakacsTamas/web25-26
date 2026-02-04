@@ -1,1 +1,3 @@
-SELECT SUM(ar *0.015) AS Bevétel2021 FROM hirdetes WHERE hirdetes.allapot="eladva" AND hirdetes.datum LIKE "2021%";
+SELECT SUM(hirdetes.ar*0.015) AS bevetel
+FROM hirdetes
+WHERE hirdetes.datum LIKE "2021%" AND hirdetes.allapot = "eladva"
