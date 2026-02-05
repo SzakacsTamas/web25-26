@@ -8,3 +8,4 @@ Route::get('/', function () {
 Route::get('/randomMagamtol', function () {
     return view('randomMagamtol');
 });
+Route::view('/dashboard','dashboard');
