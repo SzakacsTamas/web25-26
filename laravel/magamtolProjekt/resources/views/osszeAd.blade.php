@@ -18,14 +18,7 @@
             const szam1 = document.getElementById('szam1').value;
             const szam2 = document.getElementById('szam2').value;
 
-            fetch(`/api/szamol?szam1=${encodeURIComponent(szam1)}&szam2=${encodeURIComponent(szam2)}`)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('Apikimenet').textContent = JSON.stringify(data, null, 2);
-                })
-                .catch(error => {
-                    console.error('Error fetching API data:', error);
-                });
+           fetch("/api/osszeAd")
         }
     </script>
 </body>

@@ -18,14 +18,21 @@
             const szam1 = document.getElementById('szam1').value;
             const szam2 = document.getElementById('szam2').value;
 
-            fetch(`/api/szamol?szam1=${encodeURIComponent(szam1)}&szam2=${encodeURIComponent(szam2)}`)
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('Apikimenet').textContent = JSON.stringify(data, null, 2);
+            fetch("/api/szamol")
+            {
+                method="post",
+                headers={
+                    "Content-Type":"application/json"
+                },
+                body=JSON.stringify({
+                    szam1:szam1,
+                    szam2:szam2
+                }).then(res=>res.json())
+                .then(data=>{
+                    document.getElementById('Apikimenet').innerText=data.eredmeny;
                 })
-                .catch(error => {
-                    console.error('Error fetching API data:', error);
-                });
+                
+            }
         }
     </script>
 </body>
