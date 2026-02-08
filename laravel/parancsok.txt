@@ -35,6 +35,7 @@ http://127.0.0.1:8000/randomMagamtol
 
 Vezérlő létrehpzása
 php artisan make:controller Api/TestController (Vagy bármi random)
+
     public function index(){
         return response()->json([
             'status' => 'ok',
@@ -42,4 +43,19 @@ php artisan make:controller Api/TestController (Vagy bármi random)
         ]);
     }
 
+routes/web.php
+Route::view('/dashboard','dashboard')
 
+új API, neve : összead
+Kapjon 2 számot, majd adja vissza a 2 számot és az eredeményt
+létrehozni egy web URL-t amivel kitudjuk probalni
+sima html, (2 beviteli mezo, gomb, hely ahol megjelenik az eredmeny)
+
+kövi feladat
+új API 
+tudjon adatbázisba elmenteni egy megadott szöveget
+valamint
+visszaadja az összes adatbázisba elmentett szót
+legyen egy kapcsolója hogy 'rendezés'
+oldal készítése ami használja az API-t ahol lehet bevinni egy szót, vagy szöveget 4-5 másodpercenként lekéri az eddig lekért szavakat és megjeleníti azokat
+ehhez egy ki-be kapcsolható gomb

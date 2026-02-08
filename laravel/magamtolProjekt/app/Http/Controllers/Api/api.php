@@ -10,7 +10,7 @@ class TestController extends Controller
         public function index(){
         return response()->json([
             'status' => 'ok',
-            'message' => 'API működik'
+            'message' => 'API működAPINAik'
         ]);
     }
 }
