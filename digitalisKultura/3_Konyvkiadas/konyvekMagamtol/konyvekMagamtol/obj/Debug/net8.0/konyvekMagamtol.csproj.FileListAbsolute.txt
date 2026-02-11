@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\bin\Debug\net8.0\konyvekMagamtol.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\bin\Debug\net8.0\konyvekMagamtol.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\bin\Debug\net8.0\konyvekMagamtol.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\bin\Debug\net8.0\konyvekMagamtol.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\bin\Debug\net8.0\konyvekMagamtol.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\refint\konyvekMagamtol.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\konyvekMagamtol.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\3_Konyvkiadas\konyvekMagamtol\konyvekMagamtol\obj\Debug\net8.0\ref\konyvekMagamtol.dll
