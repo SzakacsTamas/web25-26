@@ -7,8 +7,8 @@
    viewBox="0 0 181 181"
    version="1.1"
    id="svg1"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   sodipodi:docname="emblema_forras.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   sodipodi:docname="emblema.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -24,14 +24,14 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.97890838"
-     inkscape:cx="267.64507"
-     inkscape:cy="348.85798"
-     inkscape:window-width="1920"
-     inkscape:window-height="991"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
-     inkscape:window-maximized="1"
+     inkscape:zoom="0.69219275"
+     inkscape:cx="373.45089"
+     inkscape:cy="327.94333"
+     inkscape:window-width="1195"
+     inkscape:window-height="1000"
+     inkscape:window-x="716"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs1">
@@ -106,5 +106,75 @@
        id="text1"
        style="font-size:18.3444px;font-family:'Open Sans';-inkscape-font-specification:'Open Sans, @wght=700';font-variation-settings:'wght' 700;letter-spacing:7.9375px;fill:#ffffff;fill-opacity:1;stroke-width:1.5"
        aria-label="HUNGARY" />
+    <path
+       style="fill:#000000;stroke-width:0.264583"
+       id="path4"
+       sodipodi:type="arc"
+       sodipodi:cx="90.5"
+       sodipodi:cy="90.5"
+       sodipodi:rx="50"
+       sodipodi:ry="50"
+       sodipodi:start="1.5707963"
+       sodipodi:end="3.1415927"
+       sodipodi:arc-type="slice"
+       d="M 90.5,140.5 A 50,50 0 0 1 55.144661,125.85534 50,50 0 0 1 40.5,90.5 h 50 z" />
+    <path
+       style="fill:#000000;stroke-width:0.264583"
+       id="path6"
+       sodipodi:type="arc"
+       sodipodi:cx="90.5"
+       sodipodi:cy="90.5"
+       sodipodi:rx="50"
+       sodipodi:ry="50"
+       sodipodi:start="4.712389"
+       sodipodi:end="0"
+       sodipodi:arc-type="slice"
+       d="m 90.5,40.5 a 50,50 0 0 1 50,50 h -50 z" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.280491"
+       id="rect6"
+       width="2.5"
+       height="50.272835"
+       x="88.776909"
+       y="40.407467" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.280491"
+       id="rect6-8"
+       width="2.5"
+       height="50.272835"
+       x="90.116272"
+       y="90.280922" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.280491"
+       id="rect6-1"
+       width="2.5"
+       height="50.272835"
+       x="90.282074"
+       y="-141.19377"
+       transform="rotate(90)" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.280491"
+       id="rect6-2"
+       width="2.5"
+       height="50.272835"
+       x="88.280106"
+       y="-90.625511"
+       transform="rotate(90)" />
+    <path
+       id="path7-6"
+       style="fill:#000000;stroke:#ffffff;stroke-width:0.965;stroke-dasharray:none;stroke-opacity:1"
+       d="M 83.275816,49.499921 A 41,41 0 0 0 56.921353,59.0921 l 5.785176,6.89467 a 32,32 0 0 1 8.442379,-5.099947 v 59.226357 a 32,32 0 0 1 -8.442379,-5.09943 l -5.785176,6.89415 A 41,41 0 0 0 83.275816,131.50008 41,41 0 0 0 124.27592,90.500002 41,41 0 0 0 83.275816,49.499921 Z m 0,8.999967 a 32,32 0 0 1 32.000144,32.000114 32,32 0 0 1 -32.000144,32.000118 32,32 0 0 1 -1.754415,-0.0481 V 58.547947 a 32,32 0 0 1 1.754415,-0.04806 z" />
+    <path
+       style="fill:#ff0000;stroke:#ffffff;stroke-width:0.964999;stroke-dasharray:none;stroke-opacity:1"
+       id="path9"
+       sodipodi:type="arc"
+       sodipodi:cx="49.643341"
+       sodipodi:cy="84.61824"
+       sodipodi:rx="0.23889962"
+       sodipodi:ry="0.047779921"
+       sodipodi:start="2.268928"
+       sodipodi:end="4.0142573"
+       sodipodi:arc-type="slice"
+       d="m 49.489779,84.654842 a 0.23889962,0.04777992 0 0 1 -0.08534,-0.0366 0.23889962,0.04777992 0 0 1 0.08534,-0.0366 l 0.153562,0.0366 z" />
   </g>
 </svg>
