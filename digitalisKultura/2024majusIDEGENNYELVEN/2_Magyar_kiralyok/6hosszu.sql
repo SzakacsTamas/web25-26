@@ -1,5 +1,5 @@
-SELECT uralkodo.nev, hivatal.meddig-hivatal.mettol+1 AS uralkodoEv
-FROM hivatal, uralkodo
-WHERE hivatal.uralkodo_az=uralkodo.azon
-ORDER BY uralkodoEv DESC
-LIMIT 1
+ SELECT uralkodo.nev, (hivatal.meddig+1)-hivatal.mettol as uralkodasev
+FROM uralkodo, hivatal
+WHERE uralkodo.azon =hivatal.uralkodo_az
+ORDER by uralkodasev DESC
+LIMIT 1;
