@@ -1,3 +1,5 @@
-SELECT versenyszam.nev AS versenyszamNeve, bajnok.ev
-FROM jatekos, versenyszam, bajnok
-WHERE jatekos.id=bajnok.jatekos_id AND versenyszam.id=bajnok.vsz_id AND jatekos.nev="Harczi Zsolt"
+SELECT bajnok.ev, versenyszam.nev
+FROM bajnok, versenyszam, jatekos
+WHERE jatekos.nev = "Harczi Zsolt" AND 
+jatekos.id =bajnok.jatekos_id AND
+bajnok.vsz_id = versenyszam.id;

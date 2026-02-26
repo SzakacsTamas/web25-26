@@ -1,3 +1,3 @@
-SELECT Count(jatekos.neme), IF(neme=0,"no","férfi")
+SELECT COUNT(jatekos.neme), IF(jatekos.neme=0,"nő","férfi")
 FROM jatekos
-GROUP BY jatekos.neme
+GROUP BY jatekos.neme;

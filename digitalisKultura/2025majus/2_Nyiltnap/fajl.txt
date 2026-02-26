@@ -1,1 +1,2 @@
 INSERT INTO `telepules`(`nev`) SELECT DISTINCT telepules FROM diakok ORDER BY diakok.telepules
+

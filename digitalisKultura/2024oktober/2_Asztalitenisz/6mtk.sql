@@ -1,6 +1,5 @@
 SELECT DISTINCT jatekos.nev
-FROM jatekos, egyesulet, bajnok
-WHERE egyesulet.id = egyesulet_id
- AND jatekos.id = jatekos_id
- AND egyesulet.nev="MTK"
-ORDER BY neme, jatekos.nev;
+FROM egyesulet, jatekos, bajnok
+WHERE egyesulet.nev = "MTK" AND
+egyesulet.id=bajnok.egyesulet_id AND bajnok.jatekos_id = jatekos.id
+ORDER BY jatekos.neme, jatekos.nev;
