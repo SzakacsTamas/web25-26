@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\bin\Debug\net8.0\utemez2.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\bin\Debug\net8.0\utemez2.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\bin\Debug\net8.0\utemez2.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\bin\Debug\net8.0\utemez2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\bin\Debug\net8.0\utemez2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\refint\utemez2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\utemez2.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2023majus\3_Utemezes\utemez2\utemez2\obj\Debug\net8.0\ref\utemez2.dll
