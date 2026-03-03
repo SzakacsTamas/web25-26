@@ -245,7 +245,7 @@ function adatListaAdat()
             JOIN tulajdonsagnev ON tulajdonsag.id=tulajdonsag.tulajdonsag_id
             JOIN eloadas ON tulajdonsag.eloadasid=eloadas.id
             GROUP BY orak.id
-            ORDER BY datum
+            ORDER BY eloadas.cim
         ",
     );
     $check->execute();
