@@ -88,7 +88,7 @@ $tartalom = szerkezet();
  
   function adatForm(){
  
-    $formAdat=["id"=>"","nev"=>"","email"=>"","telefon"=>"","telepules_id"=>""];
+    $formAdat=["id"=>"","ertek"=>""];
     if(isset($_GET["action"]) && $_GET["action"] == "edit"){
       $formAdat = formAdat($_GET["id"]);
     }
