@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\bin\Debug\net8.0\belepteto2.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\bin\Debug\net8.0\belepteto2.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\bin\Debug\net8.0\belepteto2.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\bin\Debug\net8.0\belepteto2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\bin\Debug\net8.0\belepteto2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\refint\belepteto2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\belepteto2.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2024majus\3_Belepteto_rendszer\belepteto2\belepteto2\obj\Debug\net8.0\ref\belepteto2.dll
