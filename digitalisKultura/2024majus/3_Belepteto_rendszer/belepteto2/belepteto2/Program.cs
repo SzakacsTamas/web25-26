@@ -53,9 +53,83 @@ Console.WriteLine(kolcsonzok);
 
 //6Feladat
 Console.WriteLine("6.Feladat");
+List<string> rendesenKimentek = new List<string>();
+foreach (adatok adat in belepesek)
+{
+    int aktualisPerc = adat.ora * 60 + adat.perc;
+
+    int RendesKilepesAlso = 10 * 60 + 45;
+    int RendesKilepesFelso = 10 * 60 + 50;
+
+    if (adat.esemenyKodja == 2 && aktualisPerc >= RendesKilepesAlso && aktualisPerc <= RendesKilepesFelso)
+    {
+        rendesenKimentek.Add(adat.diakAzonosito);
+    }
+}
+
+foreach (adatok adat in belepesek)
+{
+    int aktualisPerc = adat.ora * 60 + adat.perc;
+
+    int alsoHatar = 10 * 60 + 51;
+    int felsoHatar = 11 * 60;
+
+    if (adat.esemenyKodja == 1 &&
+        aktualisPerc >= alsoHatar &&
+        aktualisPerc <= felsoHatar &&
+        !rendesenKimentek.Contains(adat.diakAzonosito))
+    {
+        bool voltKorabbiBelepes = false;
+
+        foreach (adatok masik in belepesek)
+        {
+            int masikPerc = masik.ora * 60 + masik.perc;
+
+            if (masik.diakAzonosito == adat.diakAzonosito &&
+                masik.esemenyKodja == 1 &&
+                masikPerc < aktualisPerc)
+            {
+                voltKorabbiBelepes = true;
+                break;
+            }
+        }
+
+        if (voltKorabbiBelepes)
+        {
+            Console.Write($"{adat.diakAzonosito} ");
+        }
+    }
+}
+//LINKQ 
+var eredmeny = belepesek
+    .Where(a =>
+        a.esemenyKodja == 1 &&
+        (a.ora * 60 + a.perc) >= (10 * 60 + 51) &&
+        (a.ora * 60 + a.perc) <= (11 * 60) &&
+
+        // nem ment ki 10:45-10:50 között
+        !belepesek.Any(b =>
+            b.diakAzonosito == a.diakAzonosito &&
+            b.esemenyKodja == 2 &&
+            (b.ora * 60 + b.perc) >= (10 * 60 + 45) &&
+            (b.ora * 60 + b.perc) <= (10 * 60 + 50)
+        ) &&
+
+        // volt korábbi belépése
+        belepesek.Any(b =>
+            b.diakAzonosito == a.diakAzonosito &&
+            b.esemenyKodja == 1 &&
+            (b.ora * 60 + b.perc) < (a.ora * 60 + a.perc)
+        )
+    )
+    .Select(a => a.diakAzonosito)
+    .Distinct();
+
+Console.WriteLine(string.Join(" ", eredmeny));
 
 
 //7Feladat
+Console.WriteLine();
 Console.WriteLine("7.Feladat");
 
 Console.Write("Egy tanuló azonosítója=");
@@ -91,5 +165,6 @@ else
             break;
         }
     }
+    Console.WriteLine($"A tanuló érkezése és távozása között {((utolsoBelepesOra * 60 + utolsoBelepesPerc) - (elsoBelepesOra * 60 + elsoBelepesPerc)) / 60} óra {((utolsoBelepesOra * 60 + utolsoBelepesPerc) - (elsoBelepesOra * 60 + elsoBelepesPerc)) % 60} perc telt el.");
 }
-Console.WriteLine($"A tanuló érkezése és távozása között {((utolsoBelepesOra * 60 + utolsoBelepesPerc) - (elsoBelepesOra * 60 + elsoBelepesPerc)) / 60} óra {((utolsoBelepesOra*60+utolsoBelepesPerc)-(elsoBelepesOra*60+elsoBelepesPerc))%60} perc telt el.");
+

@@ -7,6 +7,9 @@
       "RelativeMoniker": "D:0:0:{BA634751-1385-49A1-A766-F91322E9DF57}|belepteto2\\belepteto2.csproj|solutionrelative:belepteto2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BA634751-1385-49A1-A766-F91322E9DF57}|belepteto2\\belepteto2.csproj|c:\\xampp\\htdocs\\web25-26\\digitaliskultura\\2024majus\\3_belepteto_rendszer\\belepteto2\\belepteto2\\adatok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA634751-1385-49A1-A766-F91322E9DF57}|belepteto2\\belepteto2.csproj|solutionrelative:belepteto2\\adatok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -21,18 +24,26 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AQIAAH8UAAAAAAAAAAAtwIUUAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-03-05T16:50:33.588Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "adatok.cs",
               "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\digitalisKultura\\2024majus\\3_Belepteto_rendszer\\belepteto2\\belepteto2\\adatok.cs",
               "RelativeDocumentMoniker": "belepteto2\\adatok.cs",
               "ToolTip": "C:\\xampp\\htdocs\\web25-26\\digitalisKultura\\2024majus\\3_Belepteto_rendszer\\belepteto2\\belepteto2\\adatok.cs",
               "RelativeToolTip": "belepteto2\\adatok.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T09:51:14.934Z"
             },
@@ -44,10 +55,14 @@
               "RelativeDocumentMoniker": "belepteto2\\Program.cs",
               "ToolTip": "C:\\xampp\\htdocs\\web25-26\\digitalisKultura\\2024majus\\3_Belepteto_rendszer\\belepteto2\\belepteto2\\Program.cs",
               "RelativeToolTip": "belepteto2\\Program.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAAwDcAAAAAAAAAAAAAAA==",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAcwH8AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-04T09:50:47.406Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             }
           ]
         }
