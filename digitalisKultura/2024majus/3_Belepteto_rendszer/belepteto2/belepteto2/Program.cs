@@ -49,4 +49,47 @@ Console.WriteLine($"A menzán aznap {szam} tanuló ebédelt.");
 Console.WriteLine("5.Feladat");
 
 var kolcsonzok = belepesek.Where(asd => asd.esemenyKodja == 4).GroupBy(asd => asd.diakAzonosito).Count();
-Console.WriteLine(kolcsonzok); 
+Console.WriteLine(kolcsonzok);
+
+//6Feladat
+Console.WriteLine("6.Feladat");
+
+
+//7Feladat
+Console.WriteLine("7.Feladat");
+
+Console.Write("Egy tanuló azonosítója=");
+string bekertAzonosito=Console.ReadLine();
+
+var tanulo = belepesek.Where(asd=>asd.diakAzonosito == bekertAzonosito);
+int elsoBelepesOra = 0;
+int elsoBelepesPerc = 0;
+int utolsoBelepesOra = 0;
+int utolsoBelepesPerc = 0;
+if (tanulo.Count()==0)
+{
+    Console.WriteLine("Nincs ilyen tanuló!");
+}
+else
+{
+    foreach(adatok adat in tanulo)
+    {
+        if (adat.esemenyKodja == 2)
+        {
+            utolsoBelepesOra = adat.ora;
+            utolsoBelepesPerc = adat.perc;
+        }
+
+        
+    }
+    foreach(adatok adat in tanulo)
+    {
+        if (adat.esemenyKodja == 1)
+        {
+            elsoBelepesOra = adat.ora;
+            elsoBelepesPerc = adat.perc;
+            break;
+        }
+    }
+}
+Console.WriteLine($"A tanuló érkezése és távozása között {((utolsoBelepesOra * 60 + utolsoBelepesPerc) - (elsoBelepesOra * 60 + elsoBelepesPerc)) / 60} óra {((utolsoBelepesOra*60+utolsoBelepesPerc)-(elsoBelepesOra*60+elsoBelepesPerc))%60} perc telt el.");

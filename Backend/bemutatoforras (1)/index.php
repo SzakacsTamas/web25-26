@@ -17,14 +17,13 @@
    $page = $_GET["page"] ?? "";
    $tartalom="";
    switch($page){
-    case "eloadas":
-        //include("includes/csoport.php");
+     case "eloadas":
         $oldalData=[
-                "cim" => "sablon",
-                "page" => "csoport",
-                "tabla" => "csoport"
+                "cim" => "Előadás",
+                "page" => "eloadas",
+                "tabla" => "eloadas"
             ];
-            include_once("includes/egyszeruAdatbazis.php");
+            include_once("includes/eloadas.php");;
             break;
     case "mufaj":
             $oldalData=[
@@ -53,11 +52,11 @@
             
     case "szinhaz":
         $oldalData=[
-                "cim" => "sablon",
-                "page" => "targy",
-                "tabla" => "targy"
+                "cim" => "Színház",
+                "page" => "szinhaz",
+                "tabla" => "szinhaz"
             ];
-            include_once("includes/egyszeruAdatbazis.php");;
+            include_once("includes/szinhaz.php");;
             break;
     case "tulajdonsag":
         $oldalData=[

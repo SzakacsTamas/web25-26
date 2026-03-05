@@ -4,18 +4,18 @@
 if(isset($_POST))
 {
   $postId = $_POST['id'] ?? '';
-  $postErtek = $_POST['ertek'] ?? '';
-  $postEloadasId = $_POST['eloadas_id'] ?? '';
-  $postTulajdonsagNevId = $_POST['tulajdonsagnev_id'] ?? '';
+  $postNev = $_POST['nev'] ?? '';
+  $postSzekhelyId = $_POST['szekhely_id'] ?? '';
+
  
   $postSend = $_POST['save'] ?? 'default';
   $postNew = $_POST['new'] ?? 'default';
   if($postSend==""){
-    adatUpdate($postId,$postErtek,$postEloadasId,$postTulajdonsagNevId);
+    adatUpdate($postId,$postNev,$postSzekhelyId);
     
   }
   elseif($postNew==""){
-    adatInsert($postErtek,$postEloadasId,$postTulajdonsagNevId);
+    adatInsert($postNev,$postSzekhelyId);
     
   }
 
@@ -30,12 +30,14 @@ $tartalom="";
 $tartalom = szerkezet();
 
   function cim($cim){
+    global $oldalData;
      return "<h2>$cim</h2>";
   }
   function szerkezet(){
+        global $oldalData;
     return 
     "<div class=\"container\">
-        <div class=\"row\">".cim("Diakok")."</div>
+        <div class=\"row\">".cim($oldalData["cim"])."</div>
         <div class=\"row\">
             <div class=\"col-6\">
                 ".adatForm()."
@@ -47,50 +49,12 @@ $tartalom = szerkezet();
     </div>
     ";
   }
-   function oraListaAdat(){
-    GLOBAL $conn; 
-
-
-    //$sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)";
-    $sql="SELECT orak.*, tanar.nev as tanar_nev,
-            terem.nev as terem_nev ,
-            csoport.nev as csoport_nev ,
-            targy.nev as targy_nev ,
-            COUNT(kapcsolo.diakid) as diak_darab
-    from orak 
-            join tanar on orak.tanar_id=tanar.id
-            join terem on orak.terem_id=terem.id
-            join csoport on orak.csoport_id=csoport.id
-            join targy on orak.targy_id=targy.id
-            join kapcsolo on orak.id=kapcsolo.oraid
-        GROUP BY orak.id
-        ORDER BY datum,orasorszam";
-    $vissza=[];
-    if($stmt = $conn->prepare($sql)) {
-
-      //$stmt ->bind_param("i",$szam);
-      //$szam = 1;
-      $stmt->execute();
-      $result= $stmt->get_result();
-      
-      while($row = $result->fetch_assoc()) {
-       $vissza[] = $row;
-      }
-      //var_dump($vissza);
-      
-    }
-    else {
-      echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    $stmt ->close();
-
-    return $vissza;
-  }
+   
  
   function adatForm(){
     global $oldalData;
  
-    $formAdat=["id"=>"","eloadas"=>"","eloadasid"=>"","nev"=>"","ertek"=>"","tulajdonsagnev_id"=>""];
+    $formAdat=["id"=>"","eloadas"=>"","eloadasid"=>"","nev"=>"","ertek"=>"","szekhely_id"=>""];
     if(isset($_GET["action"]) && $_GET["action"] == "edit"){
       $formAdat = formAdat($_GET["id"]);
     }
@@ -101,18 +65,15 @@ $tartalom = szerkezet();
   <div class="container">
     <input type="hidden" name="id" id="id" value="'.$formAdat['id'].'">
     <div class="row">
-      <div class="col-12">Előadások:</div>
-         
+
+            <div class="col-12">Székhely:</div>
               <div class="col-12">
-              ' . adatSelect("eloadas",$formAdat['eloadasid'], "cim") . '
+              ' . adatSelect("szekhely",$formAdat['szekhely_id']) . '
               </div>
 
-             <div class="col-12">Név:</div>
-              <div class="col-12">
-              ' . adatSelect("tulajdonsagnev",$formAdat['tulajdonsagnev_id']) . '
-              </div>
-                   <div class="col-12">Érték:</div>
-                     <div class="col-12"><input type="number" name="ertek" id="ertek" class="form-control" value="'.$formAdat["ertek"].'"></div>
+
+                   <div class="col-12">Név:</div>
+                     <div class="col-12"><input type="text" name="nev" id="nev" class="form-control" value="'.$formAdat["nev"].'"></div>
 
     </div>
 
@@ -207,9 +168,8 @@ $tartalom = szerkezet();
 
     $vissza.="<li class=\"list-group-item$elemClass\">
                 <div class=\"row\">
-                  <div class=\"col-7\">$egyAdat[cim]</div>
-                  <div class=\"col-2\">$egyAdat[nev]</div>
-                  <div class=\"col-1\">$egyAdat[ertek]</div>
+                  <div class=\"col-7\">$egyAdat[nev] ($egyAdat[szekHely])</div>
+
                   <div class=\"col-2\">
                     <a href=\"?page=".$oldalData["page"]."&action=edit&id=$egyAdat[id]\" class=\"$linkColor\"><i class=\"bi bi-pencil\"></i></a>
                     <a href=\"?page=".$oldalData["page"]."&action=delete&id=$egyAdat[id]\" class=\"$linkColor\"><i class=\"bi bi-trash\"></i></a>
@@ -230,11 +190,10 @@ $tartalom = szerkezet();
 
 
     //$sql = "INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)";
-    $sql="SELECT tulajdonsag.*, eloadas.cim, tulajdonsagnev.nev 
-    FROM tulajdonsag
-                          JOIN tulajdonsagnev on tulajdonsagnev.id=tulajdonsag.tulajdonsagnev_id
-                          JOIN eloadas on tulajdonsag.eloadasid=eloadas.id
-                        ORDER BY eloadas.cim";
+    $sql="SELECT szinhaz.*, szekhely.nev AS szekHely
+    FROM szinhaz
+                          JOIN szekhely on szekhely_id=szekhely.id
+                         ORDER BY szinhaz.nev;";
     $vissza=[];
     if($stmt = $conn->prepare($sql)) {
 
@@ -261,7 +220,7 @@ $tartalom = szerkezet();
 
 
     
-    $sql="SELECT * from tulajdonsag WHERE id=?";
+    $sql="SELECT * from szinhaz WHERE id=?";
 
     $vissza=[];
     if($stmt = $conn->prepare($sql)) {
@@ -284,13 +243,13 @@ $tartalom = szerkezet();
     return $vissza[0];
   }
   
-   function adatInsert($ertek,$eloadas_id,$tulajdonsagnev_id){
+   function adatInsert($nev,$szekhely_id){
     GLOBAL $conn; 
 
-    $sql="INSERT INTO tulajdonsag (ertek,eloadasid,tulajdonsagnev_id) values (?,?,?)";
+    $sql="INSERT INTO szinhaz (nev,szekhely_id) values (?,?)";
     if($stmt = $conn->prepare($sql)) {
 
-      $stmt ->bind_param("iii",$ertek,$eloadas_id,$tulajdonsagnev_id);
+      $stmt ->bind_param("si",$nev,$szekhely_id);
       $stmt->execute();  
     }
     else {
@@ -299,15 +258,15 @@ $tartalom = szerkezet();
     $stmt ->close();
   }
   
-  function adatUpdate($id,$ertek,$eloadas_id,$tulajdonsagnev_id)
+  function adatUpdate($id,$nev,$szekhely_id)
   {
     
     GLOBAL $conn; 
 
-    $sql="UPDATE tulajdonsag SET ertek=?, eloadasid=?, tulajdonsagnev_id=? WHERE id=?";
+    $sql="UPDATE szinhaz SET nev=?, szekhely_id=? WHERE id=?";
     if($stmt = $conn->prepare($sql)) {
 
-      $stmt ->bind_param("iiii",$ertek,$eloadas_id,$tulajdonsagnev_id,$id);
+      $stmt ->bind_param("sii",$nev,$szekhely_id,$id);
       $stmt->execute();  
     }
     else {
@@ -320,7 +279,7 @@ $tartalom = szerkezet();
   {
     GLOBAL $conn; 
 
-    $sql="DELETE FROM tulajdonsag WHERE id=?";
+    $sql="DELETE FROM szinhaz WHERE id=?";
     if($stmt = $conn->prepare($sql)) {
 
       $stmt ->bind_param("i",$id);
