@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-
+<style> .editable-box{ border-top:1px solid #adadad; } .edit-btn{ cursor:pointer; padding:4px 8px; border-radius:4px; border: 2px solid rgb(0, 85, 212); } .editable-input{ background: transparent; border: none; outline: none; padding: 0; margin: 0; font: inherit; width: auto; color: white; } input { font-size: 16px; } </style>
     <style>
       /* ===== LIGHT MODE ===== */
       body.light {
@@ -24,7 +24,9 @@
       
       }
 
-
+      body.light .editable-input{
+        color: #292929;
+      }
       body.light #sidebar {
         background-color: rgba(155, 155, 155, 0.4);
         color: #222;
@@ -666,5 +668,45 @@ function toggleLimitInput() {
 
 
     </script>
+<script>
+  function editWord() {
+  const span = document.getElementById("word");
+  const editBtn = document.querySelector(".editable-box .edit-btn"); // ceruza gomb
+  const currentText = span.innerText;
+
+  // Ceruza elrejtése
+  editBtn.style.display = "none";
+
+  const input = document.createElement("input");
+  input.type = "text";
+  input.value = currentText;
+  input.classList.add("editable-input");
+
+  span.replaceWith(input);
+  input.focus();
+
+  function finishEdit() {
+    saveWord(input);
+    // Ceruza vissza
+    editBtn.style.display = "block";
+  }
+
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      finishEdit();
+    }
+  });
+
+  input.addEventListener("blur", finishEdit);
+}
+
+function saveWord(input) {
+  const span = document.createElement("span");
+  span.id = "word";
+  span.innerText = input.value || "Üres";
+
+  input.replaceWith(span);
+}
+</script>
   </body>
 </html>
