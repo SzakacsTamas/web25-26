@@ -75,7 +75,7 @@ body.light       .feladatTema{
 
       body {
         margin: 0;
-        font-family: "Franklin Gothic Medium", Arial, sans-serif;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         user-select: none;
         overflow-x: hidden;
       }
@@ -250,6 +250,9 @@ body.light       .feladatTema{
         #content.shifted {
           margin-left: var(--sidebar-collapsed);
         }
+          #word{
+    font-size: 14px;
+  }
       }
 
       .feladat{
@@ -523,7 +526,7 @@ body.light       .feladatTema{
 
     <!-- Content -->
     <div id="content">
-      <div class="tartalmiResz  p-4" id="contentInner">
+      <div class="tartalmiResz  p-1 p-lg-4" id="contentInner">
         <div class="row g-4">
 
 
@@ -669,44 +672,98 @@ function toggleLimitInput() {
 
     </script>
 <script>
-  function editWord() {
-  const span = document.getElementById("word");
-  const editBtn = document.querySelector(".editable-box .edit-btn"); // ceruza gomb
-  const currentText = span.innerText;
+const WORD_CAP = 20;
 
-  // Ceruza elrejtése
-  editBtn.style.display = "none";
+function editWord() {
+  const span = document.getElementById("word");
+  const currentText = span.innerText;
 
   const input = document.createElement("input");
   input.type = "text";
+  input.value = currentText;
+  input.maxLength = WORD_CAP;
+  input.classList.add("editable-input");
+
+  span.replaceWith(input);
+  input.focus();
+
+  input.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      saveWord(input);
+    }
+  });
+
+  input.addEventListener("blur", function() {
+    saveWord(input);
+  });
+}
+
+function saveWord(input) {
+
+  let value = input.value || "Üres";
+
+  if (value.length > WORD_CAP) {
+    value = value.substring(0, WORD_CAP);
+  }
+
+  const span = document.createElement("span");
+  span.id = "word";
+  span.innerText = value;
+
+  input.replaceWith(span);
+}
+
+function togglePassword() {
+  const span = document.getElementById("password");
+  const btn = document.querySelector(".view-btn");
+  const real = span.dataset.real;
+
+  const hidden = "•".repeat(real.length);
+
+  if (span.innerText === hidden) {
+    span.innerText = real;
+    btn.innerText = "🙈";
+  } else {
+    span.innerText = hidden;
+    btn.innerText = "👁";
+  }
+}
+
+function editPassword() {
+  const span = document.getElementById("password");
+  const currentText = span.dataset.real;
+
+  const input = document.createElement("input");
+  input.type = "password";
   input.value = currentText;
   input.classList.add("editable-input");
 
   span.replaceWith(input);
   input.focus();
 
-  function finishEdit() {
-    saveWord(input);
-    // Ceruza vissza
-    editBtn.style.display = "block";
-  }
-
   input.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
-      finishEdit();
+      savePassword(input);
     }
   });
 
-  input.addEventListener("blur", finishEdit);
+  input.addEventListener("blur", function() {
+    savePassword(input);
+  });
 }
 
-function saveWord(input) {
+function savePassword(input) {
   const span = document.createElement("span");
-  span.id = "word";
-  span.innerText = input.value || "Üres";
+  span.id = "password";
+
+  const value = input.value || "";
+  span.dataset.real = value;
+
+  span.innerText = "•".repeat(value.length);
 
   input.replaceWith(span);
 }
+
 </script>
   </body>
 </html>

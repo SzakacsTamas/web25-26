@@ -13,15 +13,19 @@ foreach (string sor in konyv)
 Console.WriteLine("2. feladat");
 Console.Write("Kérem adja meg az ismétlések számát: ");
 int szam = int.Parse(Console.ReadLine());
-string asd = "szöveg \n sadsad";
-/*
-for (int i = 0; i < szam; i++)
+int maxHossz = 0;
+
+foreach (string sor in konyv)
 {
-    foreach (string sor in konyv)
-    {
-        Console.WriteLine($"{sor} |");
-        
-    }
+    if (sor.Length > maxHossz)
+        maxHossz = sor.Length;
 }
-*/
-Console.Write(asd);
+foreach (string sor in konyv)
+{
+    for (int i = 0; i < szam; i++)
+    {
+        Console.Write(sor.PadRight(maxHossz) + " | ");
+    }
+    Console.WriteLine();
+}
+
