@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\bin\Debug\net8.0\autok2.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\bin\Debug\net8.0\autok2.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\bin\Debug\net8.0\autok2.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\bin\Debug\net8.0\autok2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\bin\Debug\net8.0\autok2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\refint\autok2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\autok2.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2024oktober\3_Autok_mozgasa\autok2\autok2\obj\Debug\net8.0\ref\autok2.dll
