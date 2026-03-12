@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\bin\Debug\net8.0\reklam2.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\bin\Debug\net8.0\reklam2.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\bin\Debug\net8.0\reklam2.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\bin\Debug\net8.0\reklam2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\bin\Debug\net8.0\reklam2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\refint\reklam2.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\reklam2.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2023oktober\3_Reklam\reklam2\reklam2\obj\Debug\net8.0\ref\reklam2.dll
