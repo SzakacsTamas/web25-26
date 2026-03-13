@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("reklam2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbb2bb59ccb9043517ee82ba69889f3884bb2aa8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2bc2f50ac5aa8e059544259fc0c0793efd78d420")]
 [assembly: System.Reflection.AssemblyProductAttribute("reklam2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("reklam2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

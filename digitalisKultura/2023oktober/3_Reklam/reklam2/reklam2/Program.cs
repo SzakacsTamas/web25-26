@@ -51,19 +51,68 @@ var legnagyobb= rendelesek.Max(x =>x.rendelesSzama);
 var leganyobbNap = rendelesek.Where(x => x.rendelesSzama == legnagyobb).Select(x => x.nap).First();
 
 Console.WriteLine($"A legnagyobb darabszám: {legnagyobb}, a rendelés napja {leganyobbNap}");
-var adott = rendelesek.GroupBy(x => x.nap).Select(g => new
-{
-    Nap = g.Key,
-    OsszesRendeles = g.Sum(x => x.rendelesSzama) // Rendeles mező összeadása
-})
-    .ToList();
 
-foreach (var a in adott)
-{
-    Console.WriteLine(a.OsszesRendeles);
-}
+
+
+
+
+
 //6Feladat
-void osszes()
+
+int osszes(string varosNeve, int napSzam)
+{
+    /*
+    var adott = rendelesek.GroupBy(x => x.nap).Select(g => new
+    {
+        Nap = g.Key,
+        OsszesRendeles = g.GroupBy(x => x.varos).Select(a => new
+        {
+            varosNeve = a.Key,
+            rendelesSzamVarosNapAlapjan = a.Sum(x => x.rendelesSzama)
+        })
+.ToList()
+    })
+.ToList();
+    */
+
+    var szures = rendelesek.Where(y => y.varos==varosNeve && y.nap == napSzam).Sum(y =>y.rendelesSzama);
+    return szures;
+}
+//7Feladat
+Console.WriteLine("7.Feladat");
+Console.WriteLine($"A rendelt termékek darabszáma a 21.napon PL: {osszes("PL", 21)} TV: {osszes("TV", 21)} NR: {osszes("NR", 21)}");
+
+//8Feladat
+Console.WriteLine("8.Feladat");
+int osszesAdott(string varosNeve, int napEleje, int napVege)
 {
 
+
+    var szures = rendelesek.Where(y => y.varos == varosNeve && y.nap >= napEleje && y.nap <= napVege).Count();
+
+    return szures;
 }
+StreamWriter fajl = new StreamWriter("kampany.txt");
+var varosok=rendelesek.GroupBy(x => x.varos).ToList();
+fajl.WriteLine("Napok\t1..10\t11..20\t21..30");
+Console.WriteLine("Napok\t1..10\t11..20\t21..30");
+
+foreach (var varos in varosok)
+{
+    
+    Console.Write(varos.Key);
+    fajl.Write(varos.Key);
+    for (int i = 0; i < 3; i++)
+    {
+        fajl.Write($"\t{osszesAdott(varos.Key, 1 + i * 10, 10 + i * 10)}");
+        Console.Write($"\t{osszesAdott(varos.Key, 1 + i * 10, 10 + i * 10)}");
+    }
+    Console.WriteLine();
+    fajl.WriteLine();
+}
+
+fajl.Close();
+
+
+
+
