@@ -460,68 +460,9 @@ body.light       .feladatTema{
       </div>
     </nav>
 
-    <!-- Sidebar -->
-    <div id="sidebar">
-      <hr />
-      <a href="valodiFoOldal.html"><span>🏠︎</span><span class="sidebarSzoveg">Főoldal</span></a>
-      
-      <div data-role="teacher">
-      <hr />
-      <a href="#"  onclick="loadTananyag('kurzusLetrehozas.html')"><span>✙</span><span class="sidebarSzoveg">Kurzus létrehozás</span></a>  
-      </div>
-
-            <div data-role="student">
-      <hr />
-      <a href="#"  onclick="loadTananyag('kurzushozValoCsatlakozas.html')"><span>➢</span><span class="sidebarSzoveg">Csatlakozás kurzushoz</span></a>  
-      </div>
-
-      <div data-role="student">
-      <hr />
-      <a href="#"><span>🕮</span><span class="sidebarSzoveg">Tananyag</span></a>  
-      </div>
-      <hr />
-
-      <a href="#"
-        ><span>🗐</span><span class="sidebarSzoveg">Feladatok</span></a
-      >
-      
-      <hr />
-      <a href="#"><span>✉︎</span><span class="sidebarSzoveg">Üzenetek</span></a>
-      <hr />
-      
-      
-
-
-
-
-
-<div class="mt-auto text-center">
-  <hr />
-      <div class=" p-1">
-        
-
-
-<label class="switch">
-  <input id="themeToggle" type="checkbox" class="circle" />
-  <svg viewBox="0 0 384 512" class="moon svg">
-    <path
-      d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"
-    />
-  </svg>
-  <div class="sun svg">
-    <span class="dot"></span>
-  </div>
-</label>
-
-
-
-      </div>
-   
-    </div>
-    </div>
-
-
     
+
+<div onload="loadTananyag('sidebarTanar.html')"></div>
 
 
     <!-- Content -->
@@ -639,11 +580,20 @@ applyRole(userRole);
     .then(html => {
       document.getElementById("contentInner").innerHTML = html;
       history.pushState({ file }, "", `?tananyag=${file}`);
+       initPassword(); // 🔥 EZ KELL IDE
     })
+    
     .catch(err => {
       document.getElementById("contentInner").innerHTML =
         "<p>❌ Hiba a tananyag betöltésekor.</p>";
     });
+function initPassword() {
+  const span = document.getElementById("password");
+  if (!span) return;
+
+  const real = span.dataset.real || "";
+  span.innerText = "•".repeat(real.length);
+}
 }
 
 /* Vissza gomb kezelése */
@@ -713,56 +663,113 @@ function saveWord(input) {
   input.replaceWith(span);
 }
 
+const PASS_CAP = 20;
+
+let passwordVisible = false;
+let editing = false;
+
 function togglePassword() {
   const span = document.getElementById("password");
+  const input = document.querySelector("#passwordInput");
   const btn = document.querySelector(".view-btn");
-  const real = span.dataset.real;
 
-  const hidden = "•".repeat(real.length);
+  const real = span ? span.dataset.real : input.value;
 
-  if (span.innerText === hidden) {
-    span.innerText = real;
-    btn.innerText = "🙈";
+  passwordVisible = !passwordVisible;
+
+  if (editing) {
+    // edit közben az input type változik
+    input.type = passwordVisible ? "text" : "password";
   } else {
-    span.innerText = hidden;
-    btn.innerText = "👁";
+    if (!span) return;
+
+    if (passwordVisible) {
+      span.innerText = real;
+    } else {
+      span.innerText = "•".repeat(real.length);
+    }
+  }
+
+  btn.innerText = passwordVisible ? "🙈" : "👁";
+}
+
+function toggleEditPassword() {
+  const container = document.querySelector(".editable-box");
+
+  if (!editing) {
+    startEdit(container);
+  } else {
+    stopEdit(container);
   }
 }
 
-function editPassword() {
-  const span = document.getElementById("password");
-  const currentText = span.dataset.real;
+function startEdit(container) {
+  const span = container.querySelector("#password");
+  const value = span.dataset.real || "";
 
   const input = document.createElement("input");
-  input.type = "password";
-  input.value = currentText;
+  input.type = passwordVisible ? "text" : "password";
+  input.value = value;
+  input.maxLength = PASS_CAP;
+  input.id = "passwordInput";
   input.classList.add("editable-input");
 
   span.replaceWith(input);
   input.focus();
 
+  editing = true;
+
   input.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
-      savePassword(input);
+      stopEdit(container);
     }
   });
 
-  input.addEventListener("blur", function() {
-    savePassword(input);
-  });
+  // kattintás máshova → kilép
+  setTimeout(() => {
+    document.addEventListener("click", outsideClick);
+  }, 0);
 }
 
-function savePassword(input) {
+function stopEdit(container) {
+  const input = container.querySelector("#passwordInput");
+  if (!input) return;
+
+  let value = input.value || "";
+
   const span = document.createElement("span");
   span.id = "password";
-
-  const value = input.value || "";
   span.dataset.real = value;
 
-  span.innerText = "•".repeat(value.length);
+  if (passwordVisible) {
+    span.innerText = value;
+  } else {
+    span.innerText = "•".repeat(value.length);
+  }
 
   input.replaceWith(span);
+
+  editing = false;
+  document.removeEventListener("click", outsideClick);
 }
+
+function outsideClick(e) {
+  const box = document.querySelector(".editable-box");
+
+  if (!box.contains(e.target)) {
+    stopEdit(box);
+  }
+}
+
+// INIT
+function initPassword() {
+  const span = document.getElementById("password");
+  if (!span) return;
+
+  const real = span.dataset.real || "";
+  span.innerText = "•".repeat(real.length);
+}
+
 
 </script>
   </body>

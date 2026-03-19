@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\bin\Debug\net8.0\viragok.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\bin\Debug\net8.0\viragok.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\bin\Debug\net8.0\viragok.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\bin\Debug\net8.0\viragok.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\bin\Debug\net8.0\viragok.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\refint\viragok.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\viragok.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\2022oktober\3_Viragagyasok\viragok\viragok\obj\Debug\net8.0\ref\viragok.dll

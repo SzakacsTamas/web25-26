@@ -1,5 +1,6 @@
 ﻿using kraterek;
 using System.Globalization;
+using System.Text.RegularExpressions;
 
 List<adatok> kraterek = new List<adatok>();
 string[] sorok = File.ReadAllLines("felszin_tvesszo.txt");
@@ -14,129 +15,103 @@ for (int i = 0; i < sorok.Length; i++)
 
 //2.Feladat
 Console.WriteLine("2.Feladat");
-int szamlalo = 0;
-foreach(adatok adat in kraterek)
-{
-    szamlalo++;
-}
-Console.WriteLine($"A kráterek száma: {szamlalo}");
+var kraterekSzama=kraterek.Count();
+Console.WriteLine($"Kréterek szésfkihsdig: {kraterekSzama}");
 
 //3.Feladat
 Console.WriteLine("3.Feladat");
 Console.Write("Kérem egy kráter nevét: ");
-string nev1=Console.ReadLine();
-double kraterX = 0;
-double kraterY = 0;
-double kraterSugara = 0;
-foreach (adatok adat in kraterek)
+string bekertNev= Console.ReadLine();
+var feladat3 = kraterek.Where(x => x.kraterNev == bekertNev).ToList();
+
+foreach(var faszok in feladat3)
 {
-    if (adat.kraterNev == nev1
-        
-        
-        
-        )
-    {
-
-        kraterSugara = adat.kraterSugar;
-        kraterX = adat.xKoordinata;
-        kraterY = adat.yKoordinata;
-    }
+    Console.WriteLine($"A(z) {faszok.kraterNev} középpontja X={faszok.xKoordinata} Y={faszok.yKoordinata} sugara R={faszok.kraterSugar}.");
 }
-
-Console.WriteLine($"A(z) {nev1} középpontja X={kraterX} Y={kraterY} sugara R={kraterSugara}.");
 
 //4.Feladat
 Console.WriteLine("4.Feladat");
-double legnagyobbKrater = 0;
-string legnagyobbKraterNeve = "";
-foreach(adatok adat in kraterek)
+var feladat4 = kraterek.Max(x => x.kraterSugar);
+var feladat42 = kraterek.Where(x => x.kraterSugar == feladat4).ToList();
+foreach(var asd in feladat42)
 {
-    if (legnagyobbKrater < adat.kraterSugar)
-    {
-        legnagyobbKrater=adat.kraterSugar;
-        legnagyobbKraterNeve = adat.kraterNev;
-    }
+    Console.WriteLine($"A legnagyobb kárter neve és sugara: {asd.kraterNev} {asd.kraterSugar}");
 }
 
-Console.WriteLine($"A legnagyobb kráter neve és sugara: {legnagyobbKraterNeve} {legnagyobbKrater}");
 
 //5.Feladat
-static double Tavolsag(double x1, double y1, double x2, double y2)
-{
-    double dx = x2 - x1;
-    double dy = y2 - y1;
 
-    return Math.Sqrt(dx * dx + dy * dy);
+static double tavolsag(double x1, double y1, double x2, double y2)
+{
+    return Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
 }
 
-//6.Feladat
+//6feladat
 Console.WriteLine("6.Feladat");
-Console.Write("Add meg egy kráter nevét: ");
-string nev = Console.ReadLine();
+Console.Write("Kérem egy kráter nevét: ");
+string bekertNev2 = "Jacques Cassini";
 
-adatok kivalasztott = null;
-
-// 1️⃣ Megkeressük a kiválasztott krátert
-foreach (adatok k in kraterek)
+var feladat6 =kraterek.Where(x=>x.kraterNev ==bekertNev2).ToList();
+double bekertX = 0.0;
+double bekertY = 0.0;
+double bekertSugar = 0.0;
+foreach (var asd in feladat6)
 {
-    if (k.kraterNev == nev)
-    {
-        kivalasztott = k;
-        break;
-    }
+bekertSugar = asd.kraterSugar;
+    bekertX = asd.xKoordinata;
+    bekertY = asd.yKoordinata;
 }
 
-if (kivalasztott != null)
+double osszesX = 0.0;
+double osszesY = 0.0;
+double osszesSugar = 0.0;
+string osszesNeve = "";
+Console.Write("Nincs közös része: ");
+for (int i = 0; i < kraterek.Count; i++)
 {
-    List<string> nincsKozoResz = new List<string>();
-
-    // 2️⃣ Végigmegyünk az összes kráteren
-    foreach (adatok masik in kraterek)
+    osszesSugar = kraterek[i].kraterSugar;
+    osszesX = kraterek[i].xKoordinata;
+    osszesY = kraterek[i].yKoordinata;
+   
+    if (tavolsag(bekertX, bekertY, osszesX, osszesY) > (bekertSugar+osszesSugar))
     {
-        if (masik != kivalasztott) // ne önmagával hasonlítsuk
-        {
-            double tav = Tavolsag(
-                kivalasztott.xKoordinata,
-                kivalasztott.yKoordinata,
-                masik.xKoordinata,
-                masik.yKoordinata
-            );
+        Console.Write($"{kraterek[i].kraterNev}, ");
+    };
+}
+//7feladat
+Console.WriteLine();
+Console.WriteLine("7. Feladat");
 
-            // 3️⃣ Feltétel ellenőrzés
-            if (tav > (kivalasztott.kraterSugar + masik.kraterSugar))
+for (int i = 0; i < kraterek.Count; i++)
+{
+    for (int j = i + 1; j < kraterek.Count; j++)
+    {
+        var kr1 = kraterek[i];
+        var kr2 = kraterek[j];
+        if (kr1.kraterSugar > kr2.kraterSugar)
+        {
+            if (tavolsag(kr1.xKoordinata, kr1.yKoordinata, kr2.xKoordinata, kr2.yKoordinata) < (kr1.kraterSugar - kr2.kraterSugar))
             {
-                nincsKozoResz.Add(masik.kraterNev);
+                Console.WriteLine($"A(z) {kr1.kraterNev} tartalmazza a(z) {kr2.kraterNev} krátert");
+            }
+        }
+        else if (kr2.kraterSugar > kr1.kraterSugar)
+        {
+            if (tavolsag(kr1.xKoordinata, kr1.yKoordinata, kr2.xKoordinata, kr2.yKoordinata) < (kr2.kraterSugar - kr1.kraterSugar))
+            {
+                Console.WriteLine($"A(z) {kr2.kraterNev} tartalmazza a(z) {kr1.kraterNev} krátert");
             }
         }
     }
-
-    // 4️⃣ Kiírás vessző + szóköz elválasztással
-    if (nincsKozoResz.Count > 0)
-    {
-        for (int i = 0; i < nincsKozoResz.Count; i++)
-        {
-            Console.Write(nincsKozoResz[i]);
-
-            if (i < nincsKozoResz.Count - 1)
-            {
-                Console.Write(", ");
-            }
-        }
-    }
 }
-
-//8.Feldaat
-
-string tartalom = "";
-
-foreach (adatok k in kraterek)
+//8Feladat
+StreamWriter fajl = new StreamWriter("terulet.txt");
+foreach(adatok adat in kraterek)
 {
-    double terulet = Math.Round(k.kraterSugar * k.kraterSugar * 3.14, 2);
-
-    tartalom += terulet.ToString("F2", CultureInfo.InvariantCulture)
-                + "\t"
-                + k.kraterNev
-                + "\n";
+    double ertek = (adat.kraterSugar * adat.kraterSugar) * 3.14;
+    fajl.WriteLine($"{Math.Round(ertek,2, MidpointRounding.AwayFromZero)}\t{adat.kraterNev}");
 }
 
-File.WriteAllText("terulet.txt", tartalom);
+
+
+fajl.Close();
