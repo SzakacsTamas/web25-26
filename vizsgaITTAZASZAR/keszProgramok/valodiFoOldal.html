@@ -9,7 +9,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-<style> .editable-box{ border-top:1px solid #adadad; } .edit-btn{ cursor:pointer; padding:4px 8px; border-radius:4px; border: 2px solid rgb(0, 85, 212); } .editable-input{ background: transparent; border: none; outline: none; padding: 0; margin: 0; font: inherit; width: auto; color: white; } input { font-size: 16px; } </style>
+<style> .editable-box{ border-top:1px solid #adadad; } .edit-btn{ cursor:pointer; padding:4px 8px; border-radius:4px; border: 2px solid rgb(0, 85, 212); } .editable-input{ background: transparent; border: none; color: whitesmoke; outline: none; padding: 0; margin: 0;  width: auto; }</style>
     <style>
       /* ===== LIGHT MODE ===== */
       body.light {
@@ -72,10 +72,17 @@ body.light       .feladatTema{
         --sidebar-expanded: 240px;
         
       }
+      .lathatosag{
+       padding:4px 8px; border-radius:4px; border: 2px solid rgb(0, 85, 212);
+       font-family: 'Courier New', Courier, monospace;
+       
+        
+cursor: pointer;
+      }
 
       body {
         margin: 0;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
         user-select: none;
         overflow-x: hidden;
       }
@@ -169,6 +176,7 @@ body.light       .feladatTema{
         font-family: 'Courier New', Courier, monospace;
       }
 
+
       /* Content */
       #content {
         margin-left: var(--sidebar-collapsed);
@@ -250,9 +258,7 @@ body.light       .feladatTema{
         #content.shifted {
           margin-left: var(--sidebar-collapsed);
         }
-          #word{
-    font-size: 14px;
-  }
+
       }
 
       .feladat{
@@ -260,7 +266,7 @@ body.light       .feladatTema{
         border: 1px solid rgb(158, 158, 158);
         cursor: pointer;
         font-size: 1.2rem;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
         
       }
       .feladat:hover{
@@ -462,7 +468,6 @@ body.light       .feladatTema{
 
     
 
-<div onload="loadTananyag('sidebarTanar.html')"></div>
 
 
     <!-- Content -->
@@ -587,13 +592,7 @@ applyRole(userRole);
       document.getElementById("contentInner").innerHTML =
         "<p>❌ Hiba a tananyag betöltésekor.</p>";
     });
-function initPassword() {
-  const span = document.getElementById("password");
-  if (!span) return;
 
-  const real = span.dataset.real || "";
-  span.innerText = "•".repeat(real.length);
-}
 }
 
 /* Vissza gomb kezelése */
@@ -664,83 +663,67 @@ function saveWord(input) {
 }
 
 const PASS_CAP = 20;
-
 let passwordVisible = false;
-let editing = false;
 
+// INIT (ez kell!)
+function initPassword() {
+  const span = document.getElementById("password");
+  const real = span.dataset.real || "";
+  span.innerText = "•".repeat(real.length);
+}
+
+// 👁 toggle
 function togglePassword() {
   const span = document.getElementById("password");
-  const input = document.querySelector("#passwordInput");
-  const btn = document.querySelector(".view-btn");
-
-  const real = span ? span.dataset.real : input.value;
+  const real = span.dataset.real || "";
 
   passwordVisible = !passwordVisible;
 
-  if (editing) {
-    // edit közben az input type változik
-    input.type = passwordVisible ? "text" : "password";
+  if (passwordVisible) {
+    span.innerText = real;
   } else {
-    if (!span) return;
-
-    if (passwordVisible) {
-      span.innerText = real;
-    } else {
-      span.innerText = "•".repeat(real.length);
-    }
-  }
-
-  btn.innerText = passwordVisible ? "🙈" : "👁";
-}
-
-function toggleEditPassword() {
-  const container = document.querySelector(".editable-box");
-
-  if (!editing) {
-    startEdit(container);
-  } else {
-    stopEdit(container);
+    span.innerText = "•".repeat(real.length);
   }
 }
 
-function startEdit(container) {
-  const span = container.querySelector("#password");
-  const value = span.dataset.real || "";
+// ✐ szerkesztés (ugyanaz mint a word, csak dataset!)
+function editPassword() {
+  const span = document.getElementById("password");
+  const currentText = span.dataset.real || "";
 
   const input = document.createElement("input");
-  input.type = passwordVisible ? "text" : "password";
-  input.value = value;
+  input.type = passwordVisible ? "text" : "password"; // 👈 figyeld ezt!
+  input.value = currentText;
   input.maxLength = PASS_CAP;
-  input.id = "passwordInput";
   input.classList.add("editable-input");
 
   span.replaceWith(input);
   input.focus();
 
-  editing = true;
-
   input.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
-      stopEdit(container);
+      savePassword(input);
     }
   });
 
-  // kattintás máshova → kilép
-  setTimeout(() => {
-    document.addEventListener("click", outsideClick);
-  }, 0);
+  input.addEventListener("blur", function() {
+    savePassword(input);
+  });
 }
 
-function stopEdit(container) {
-  const input = container.querySelector("#passwordInput");
-  if (!input) return;
-
+// mentés
+function savePassword(input) {
   let value = input.value || "";
+
+  if (value.length > PASS_CAP) {
+    value = value.substring(0, PASS_CAP);
+  }
 
   const span = document.createElement("span");
   span.id = "password";
   span.dataset.real = value;
 
+  // 👁 állapot megtartása!
   if (passwordVisible) {
     span.innerText = value;
   } else {
@@ -748,28 +731,7 @@ function stopEdit(container) {
   }
 
   input.replaceWith(span);
-
-  editing = false;
-  document.removeEventListener("click", outsideClick);
 }
-
-function outsideClick(e) {
-  const box = document.querySelector(".editable-box");
-
-  if (!box.contains(e.target)) {
-    stopEdit(box);
-  }
-}
-
-// INIT
-function initPassword() {
-  const span = document.getElementById("password");
-  if (!span) return;
-
-  const real = span.dataset.real || "";
-  span.innerText = "•".repeat(real.length);
-}
-
 
 </script>
   </body>
