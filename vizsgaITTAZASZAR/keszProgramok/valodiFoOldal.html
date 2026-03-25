@@ -192,7 +192,7 @@ cursor: pointer;
       .tartalmiResz {
         background-color: rgba(155, 155, 155, 0.231);
         backdrop-filter: blur(2px);
-        border-radius: 2%;
+        
        
       }
 
@@ -472,7 +472,7 @@ cursor: pointer;
 
     <!-- Content -->
     <div id="content">
-      <div class="tartalmiResz  p-2 p-lg-2" id="contentInner">
+      <div class="tartalmiResz p-2 p-lg-2" id="contentInner">
         <div class="row g-4">
 
 
@@ -733,6 +733,26 @@ function savePassword(input) {
   input.replaceWith(span);
 }
 
+</script>
+<script>
+document.addEventListener("click", function(e) {
+  if (e.target.id === "profilePic") {
+    document.getElementById("fileInput").click();
+  }
+});
+
+document.addEventListener("change", function(e) {
+  if (e.target.id === "fileInput") {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(ev) {
+      document.getElementById("profilePic").src = ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+});
 </script>
   </body>
 </html>
