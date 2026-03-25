@@ -1,0 +1,7 @@
+SELECT ingatlan.kozterulet, ingatlan.hazszam, hirdetes.datum as datum
+FROM ingatlan, hirdetes
+WHERE ingatlan.id=hirdetes.ingatlanid 
+GROUP BY hirdetes.ingatlanid
+HAVING COUNT(hirdetes.ingatlanid) < 2
+ORDER BY datum 
+LIMIT 1

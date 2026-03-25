@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center">
-  <div class="card HoverNot col-lg-6 col-12">
+  <div class="card HoverNot col-xl-6 col-md-10 col-12">
     <div class="p-3">
       <h1 class="text-center">Saját fiók kezelése</h1>
       <hr>
@@ -15,19 +15,33 @@
         </div>
 
         <!-- Felhasználónév -->
-<div>Felhasználónév</div> <div class="editable-box col-12 p-2 d-flex align-items-center"> <span id="word">Példaszó</span> <div class="edit-btn ms-auto btn-outline-primary" onclick="editWord()">✐</div> </div>
+<div>Felhasználónév</div>
+
+<div class="editable-box row p-2 align-items-center">
+
+  <!-- Szöveg -->
+  <div class="col-12 col-md-9">
+    <span id="word">Példaszó</span>
+  </div>
+
+  <!-- Gomb -->
+  <div class="col-12 col-md-3 d-flex justify-content-start justify-content-md-end mt-2 mt-md-0">
+    <div class="edit-btn btn-outline-primary" onclick="editWord()">✐</div>
+    
+  </div>
+
+</div>
 
 <br>
-
 <div>Jelszó</div>
 
-<div class="editable-box col-12 p-2 d-flex align-items-center">
+<div class="editable-box row p-2 align-items-center">
 
-  <span id="password" data-real="TitkosJelszo123"></span>
-
-  <div class="view-btn ms-auto me-2 lathatosag btn-outline-primary" onclick="togglePassword()">👁
+  <div class="col-12 col-md-9"><span id="password" data-real="TitkosJelszo123"></span></div>
+<div class="col-12 col-md-3 d-flex justify-content-start justify-content-md-end mt-2 mt-md-0" >
+  <div class="view-btn  me-2 lathatosag btn-outline-primary" onclick="togglePassword()">👁
   </div>
-  <div class="edit-btn btn-outline-primary" onclick="editPassword()">✐</div>
+  <div class="edit-btn btn-outline-primary" onclick="editPassword()">✐</div></div>
 </div>
 
       
