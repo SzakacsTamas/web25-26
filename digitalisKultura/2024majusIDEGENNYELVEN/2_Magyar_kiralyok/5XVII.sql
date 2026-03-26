@@ -1,5 +1,4 @@
-SELECT COUNT(uralkodo.azon)
+SELECT Count(uralkodo.azon) AS Királyok_száma
 FROM uralkodo, hivatal
-WHERE hivatal.uralkodo_az=uralkodo.azon AND
-hivatal.meddig >=1601 AND hivatal.mettol <=1700;
-
+WHERE uralkodo.azon = hivatal.uralkodo_az AND
+ mettol<=1700 AND meddig>=1601;
