@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\bin\Debug\net8.0\autoszerviz.exe
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\bin\Debug\net8.0\autoszerviz.deps.json
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\bin\Debug\net8.0\autoszerviz.runtimeconfig.json
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\bin\Debug\net8.0\autoszerviz.dll
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\bin\Debug\net8.0\autoszerviz.pdb
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.sourcelink.json
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.dll
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\refint\autoszerviz.dll
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.pdb
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\autoszerviz.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\gyakorlas\autoszerviz\autoszerviz\obj\Debug\net8.0\ref\autoszerviz.dll

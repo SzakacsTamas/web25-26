@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|c:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|solutionrelative:autowpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|c:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|solutionrelative:autowpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|c:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\ablak2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|solutionrelative:autowpf\\ablak2.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|c:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\adatok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65838C2D-EB68-4D3F-89B8-0605DF890F1B}|autowpf\\autowpf.csproj|solutionrelative:autowpf\\adatok.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ablak2.xaml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\ablak2.xaml",
+              "RelativeDocumentMoniker": "autowpf\\ablak2.xaml",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\ablak2.xaml",
+              "RelativeToolTip": "autowpf\\ablak2.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-13T09:07:40.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "adatok.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\adatok.cs",
+              "RelativeDocumentMoniker": "autowpf\\adatok.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\adatok.cs",
+              "RelativeToolTip": "autowpf\\adatok.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:23:02.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "autowpf\\MainWindow.xaml",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\MainWindow.xaml",
+              "RelativeToolTip": "autowpf\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-13T08:22:33.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "autowpf\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\xampp\\htdocs\\web25-26\\gyakorlas\\autowpf\\autowpf\\MainWindow.xaml.cs",
+              "RelativeToolTip": "autowpf\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACoAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T08:22:32.518Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
