@@ -1,0 +1,15 @@
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\bin\Debug\net8.0\Fuvar.exe
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\bin\Debug\net8.0\Fuvar.deps.json
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\bin\Debug\net8.0\Fuvar.runtimeconfig.json
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\bin\Debug\net8.0\Fuvar.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\bin\Debug\net8.0\Fuvar.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.AssemblyInfoInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.AssemblyInfo.cs
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.sourcelink.json
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\refint\Fuvar.dll
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.pdb
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\Fuvar.genruntimeconfig.cache
+C:\xampp\htdocs\web25-26\digitalisKultura\infoJegyzet\Fuvar\Fuvar\obj\Debug\net8.0\ref\Fuvar.dll
